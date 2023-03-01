@@ -2,7 +2,9 @@
 Uploaded all Python Algorithms into this repository which I have coded during Python Course.
 
 <!-- First Algorithm -->
-## 1: Add two numbers
+##  Add two numbers
+
+
 1. First number input.
    ```sh
    a = int(input("Enter your first Number"))
@@ -21,4 +23,29 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
    print(str(a) + " + " + str(b) + " = " + str(add_numbers(a,b)))
    ```
 
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Second Algorithm -->
+##  Count characters in a word or string.
+
+
+1. Input a word or string.
+   ```sh
+   name = input("Please enter your name: ")
+   ```
+2. Define function to count charecters and returns result.
+   ```sh
+   def name_count(name):
+       count = 0
+       for i in name:
+           count += 1
+       return count
+   ```
+3. Print Output.
+   ```sh
+   print ("Your name has " + str(name_count(name)) + " letters!")
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
