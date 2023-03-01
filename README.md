@@ -1,16 +1,16 @@
+<a name="readme-top"></a>
+
 # Python-Algorithms
 Uploaded all Python Algorithms into this repository which I have coded during Python Course.
 <!-- Back to TOP -->
-<a name="readme-top"></a>
+
 
 <!-- TABLE OF CONTENTS -->
 
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      [Add Two Numbers](#add_two_numbers)
-    </li>
+    
     <li>
       <a href="#Add-two-numbers">Add two numbers</a>
       <ul>
@@ -18,7 +18,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#count-charecters-in-a-word">Count characters in a word</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
@@ -61,7 +61,7 @@ Simple function to add two int numbers in python.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Second Algorithm -->
-##  Count characters in a word or string.
+##  Count characters in a word or string. <a href="#count-charecters-in-a-word"></a>
 
 Simple function 
 1. Input a word or string.
