@@ -10,7 +10,6 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    
     <li>
       <a href="#Add-two-numbers">Add two numbers</a>
       <ul>
