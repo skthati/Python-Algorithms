@@ -1,8 +1,8 @@
 # Python-Algorithms
-Uploaded all Python Algorithms into this repository which I have saved during Python Course.
+Uploaded all Python Algorithms into this repository which I have coded during Python Course.
 
 <!-- First Algorithm -->
-## Add two numbers
+## 1: Add two numbers
 1. First number input.
    ```sh
    a = int(input("Enter your first Number"))
