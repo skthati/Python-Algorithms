@@ -1,6 +1,54 @@
 # Python-Algorithms
 Uploaded all Python Algorithms into this repository which I have coded during Python Course.
 
+<!-- Area of Triangle -->
+##  Logic operator Square root (**)
+Function to find square root of a number.
+
+1. function definition.
+   ```sh
+   def sqroot(num1):
+    return num1 ** 0.5
+   ```
+2. function instance
+   ```sh
+   sqrt = sqroot(num1)
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- logic operator ** -->
+##  Logic operator Square root (**)
+Function to find square root of a number.
+
+1. function definition.
+   ```sh
+   def sqroot(num1):
+    return num1 ** 0.5
+   ```
+2. function instance
+   ```sh
+   sqrt = sqroot(num1)
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Using printf commond -->
+##  printf
+To print string and variables.
+
+
+1. Example code of command
+   ```sh
+   print(f'Addition of {num1} and {num2} is equals to {add(num1,num2)}')
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- First Algorithm -->
 ##  Add two numbers
 
