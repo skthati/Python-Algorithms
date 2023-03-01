@@ -11,7 +11,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#Add-two-numbers">Add two numbers</a>
+      <a href="#add-two-numbers">Add two numbers</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -60,7 +60,7 @@ Simple function to add two int numbers in python.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Second Algorithm -->
-##  Count characters in a word or string. <a href="#count-charecters-in-a-word"></a>
+##  Count characters in a word or string. <a href="count-charecters-in-a-word"></a>
 
 Simple function 
 1. Input a word or string.
