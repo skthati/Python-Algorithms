@@ -34,7 +34,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 
 <!-- First Algorithm -->
 
-##  Add two numbers <a href="add_two_numbers"></a>
+##  Add two numbers <a name="add_two_numbers"></a>
 
 Simple function to add two int numbers in python.
 
@@ -60,7 +60,7 @@ Simple function to add two int numbers in python.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Second Algorithm -->
-##  Count characters in a word or string. <a href="count-charecters-in-a-word"></a>
+##  Count characters in a word or string. <a name="count-charecters-in-a-word"></a>
 
 Simple function 
 1. Input a word or string.
