@@ -8,21 +8,134 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 <!-- TABLE OF CONTENTS -->
 
 <details>
-  <summary>Table of Contents</h2></summary>
+  <summary>Table of Contents</summary>
+
+   Algorithms
   <ol>
+    <li><a href="#Bill-split-calculator">Bill Split Calcultor</a></li>
+    <li><a href="#Celsius-to-Fahrenheit">Celsius to Fahrenheit</a></li>
+    <li><a href="#Kilometers-to-miles">Kilometers to miles</a></li>
+    <li><a href="#Area-of-Triangle">Area of Triangle</a></li>
+    <li><a href="#Split-the-digits-and-add">Split the digits and add</a></li>
+    <li><a href="#Logic-operator-Square-root-(**)">Logic operator Square root (**)</a></li>
+    <li><a href="#printf">printf</a></li>
     <li><a href="#add-two-numbers">Add two numbers</a></li>
     <li><a href="#count-charecters-in-a-word">Count characters in a word</a></li>
-    <li><a href="#printf">printf</a></li>
-    <li><a href="#Logic-operator-Square-root-(**)">Logic operator Square root (**)</a></li>
-    <li><a href="#Area-of-Triangle">Area of Triangle</a></li>
+  </ol>
+   Games
+  <ol>
+    <li><a href="Hangman-game">Hangman Game</a></li>
     <li><a href="#Dice-roll-for-games">Dice roll for games</a></li>
-    <li><a href="#Kilometers-to-miles">Kilometers to miles</a></li>
-    <li><a href="#Celsius-to-Fahrenheit">Celsius to Fahrenheit</a></li>
   </ol>
 </details>
 
+
+<!-- Hangman game -->
+## Hangman Game <a name="Hangman-game"></a>
+A classic word game where the user has to predict the charectors in a word
+before running out of lifes.
+
+1. Using `random.choice` a word is selected from word list.
+   ```sh
+   chosen_word = random.choice(word_list)
+   ```
+2. Letters in that word are replaced with `"_"` using for loop and displayed.
+   ```sh
+   display = []
+   for i in chosen_word:
+     display.append("_")
+   print(display)
+   ```
+3. Game is looped until no game lifes. Every wrong guess, game life is increased. Every right guess `"_"` is 
+    replaced with right guessed charecter. Using while loop and game state.
+   ```sh
+   while not end_of_game:
+     if "_" in display and game_life <= 10:
+       guess = input("Guess a letter: ").lower()
+       if guess in chosen_word:
+           for i in range(len(chosen_word)):
+               if chosen_word[i] == guess:
+                 display[i] = guess
+       else:
+           game_life = game_life+1
+   ```
+4. Full Game code.
+   ```sh
+   import random
+   word_list = ["aardvark", "baboon", "camel", "abruptly", "foxglove", "lengths", "subway",
+                 "absurd", "frazzlied", "lucky", "swivel", "azure", "gazebo", "transplant", 
+                 "bandwagon", "uptown", "oxygen", ]
+   chosen_word = random.choice(word_list)
+   
+   print(f'Pssst, the solution is {chosen_word}.')
+   
+   display = []
+   for i in chosen_word:
+     display.append("_")
+   print(display)
+   
+   end_of_game = False
+   game_life = 1
+   
+   while not end_of_game:
+     if "_" in display and game_life <= 10:
+       guess = input("Guess a letter: ").lower()
+       if guess in chosen_word:
+           for i in range(len(chosen_word)):
+               if chosen_word[i] == guess:
+                 display[i] = guess
+       else:
+           game_life = game_life+1
+       print(display)  
+       print(game_life)
+       
+     else:
+         if game_life == 11:
+             print("You lose!")
+             end_of_game = True
+         else:
+           print("You won!")
+           end_of_game = True
+   ```
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Rolling a Dice using randint from random library -->
+## Dice roll for games <a name="Dice-roll-for-games"></a>
+Using randint from random library, simple function to roll the dice.
+
+1. User asked for number of times to roll the dice and parse to int.
+   ```sh
+   x = int(input("Enter number of times you want to roll the dice: "))
+   ```
+2. Iterate or an option to exit. File is `random number dice.py`.
+   ```sh
+   i = 0
+   while i < x:
+    start = input("Press anykey to start the dice or c to exit: ")
+    print(random.randint(0,5))
+    i=i+1 # i+=1
+    if start == "c":
+        break
+   ```
+3. Another way of iteration. File is `dice roll.py`.
+   ```sh
+   i = 0
+   while i < 1000:
+    start = input("Press anykey to roll the dice or c to exit: ")
+    if start == "c":
+        break
+    else:
+        print(random.randint(0,5))
+        i=i+1
+   ```
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 <!-- Bill Split Calculator-->
-## Bill Split Claculator
+## Bill Split Claculator <a name="Bill-split-calculator"></a>
 Simple calculator which calculates each individual share of
 total bill with tip percentage.
 
@@ -117,40 +230,6 @@ Function to convert kilometers to miles..
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Rolling a Dice using randint from random library -->
-## Dice roll for games <a name="Dice-roll-for-games"></a>
-Using randint from random library, simple function to roll the dice.
-
-
-1. User asked for number of times to roll the dice and parse to int.
-   ```sh
-   x = int(input("Enter number of times you want to roll the dice: "))
-   ```
-2. Iterate or an option to exit. File is `random number dice.py`.
-   ```sh
-   i = 0
-   while i < x:
-    start = input("Press anykey to start the dice or c to exit: ")
-    print(random.randint(0,5))
-    i=i+1 # i+=1
-    if start == "c":
-        break
-   ```
-3. Another way of iteration. File is `dice roll.py`.
-   ```sh
-   i = 0
-   while i < 1000:
-    start = input("Press anykey to roll the dice or c to exit: ")
-    if start == "c":
-        break
-    else:
-        print(random.randint(0,5))
-        i=i+1
-   ```
-<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 <!-- Area of Triangle -->
 ## Area of Triangle <a name="Area-of-Triangle"></a>
 Function to find Area of Triangle.
@@ -166,10 +245,33 @@ Later learnt functions don't use Pascal case. `Triangle_Area(base,height)`
    ```sh
    area = Triangle_Area(base,height)
    ```
-
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Split the digits and add ** -->
+## Split the digits and add <a name="Split-the-digits-and-add"></a>
+Split the multi digit number and add to get a total.
+
+Cast user input number to string. Loop through string and add each string charecter
+by type casting again back to Int.
+
+1. Full code.
+   ```sh
+      # Split the digits and add
+      number = str(input("Enter a number: "))
+      total = 0
+      print(type(number))
+   
+      for i in number:
+          #y = int(number[i])
+          total = total + int(i)
+          print(i)
+      print(total)
+   
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- logic operator ** -->
 ## Logic operator Square root (**) <a name="Logic-operator-Square-root-(**)"></a>
