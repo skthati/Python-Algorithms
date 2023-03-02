@@ -15,12 +15,15 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
    Algorithms
   <ol>
     <li><a href="#bill-split-calculator">Bill Split Calcultor</a></li>
+    <li><a href="#leap-year">Leap year or Not</a></li>
     <li><a href="#bmi-calculator">BMI Calculator</a></li>
     <li><a href="#celsius-to-fahrenheit">Celsius to Fahrenheit</a></li>
     <li><a href="#kilometers-to-miles">Kilometers to miles</a></li>
     <li><a href="#area-of-triangle">Area of Triangle</a></li>
     <li><a href="#split-the-digits-and-add">Split the digits and add</a></li>
     <li><a href="#logic-operator-square-root-(**)">Logic operator Square root (**) </a></li>
+    <li><a href="positive-negative">Positive or Negative number</a></li>
+    <li><a href="even-odd">Even or Odd number</a></li>
     <li><a href="#printf">printf</a></li>
     <li><a href="#add-two-numbers">Add two numbers</a></li>
     <li><a href="#count-charecters-in-a-word">Count characters in a word</a></li>
@@ -138,12 +141,75 @@ Using randint from random library, simple function to roll the dice.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+<!-- Leap year or Not -->
+## Check Leap Year <a name="leap-year"></a>
+Check if a year is leap year or not.
+
+- [ ] LEAP YEAR - Divisible by 4, 100 and 400.
+- [ ] LEAP YEAR - Divisible by 4, 400 but not with 100.
+- [ ] NOT LEAP YEAR - Not divisible by 4
+- [ ] NOT LEAP YEAR - Divisibe by 4, 100 but not with 400.
+
+![leap year.drawio.png](Leap%20Year%2Fleap%20year.drawio.png)
+
+1. Output.
+   ```sh
+   Press any key to start the loop or C to end.
+   Enter the year to check if the year is Leap year or not: 1600
+   1600 year is LEAP year!1
+   Press any key to start the loop or C to end.
+   Enter the year to check if the year is Leap year or not: 1700
+   1700 year is NOT LEAP year!2
+   Press any key to start the loop or C to end.1704
+   Enter the year to check if the year is Leap year or not: 1704
+   1704 year is LEAP year!3
+   Press any key to start the loop or C to end.
+   ```
+2. Full code.
+   ```sh
+   i = 0
+   while i < 100:
+       x = input("Press any key to start the loop or C to end.")
+       x = x.lower()
+       if x != "c":
+           year = int(input("Enter the year to check if the year is Leap year or not: "))
+           if year % 4 == 0:
+               if year % 100 == 0:
+                   if year % 400 == 0:
+                       print(f'{year} year is LEAP year!1')
+                   else:
+                       print(f'{year} year is NOT LEAP year!2')
+               else:
+                   print(f'{year} year is LEAP year!3')
+           else:
+               print(f'{year} year is NOT LEAP year!4')
+           i+=1
+       else:
+           break
+   ```
+
+[Leap Year](Leap%20Year)
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- Bill Split Calculator-->
 ## Bill Split Claculator <a name="bill-split-calculator"></a>
 Simple calculator which calculates each individual share of
 total bill with tip percentage.
 
-1. Ask for total bill.
+1. Output:
+   ```sh
+   Welcome to Bill Split Calculator!
+   Enter the total bill amount: 120
+   Enter number of people total amount will be split: 3
+   Enter the tip percentage? 10, 20, or 5?10
+   Your total bill with Tip is 132.0 and each individual share is 44.0
+
+   Process finished with exit code 0
+   ```
+2. Ask for total bill.
    ```sh
    total_bill = float(input("Enter the total bill amount: "))
    
@@ -183,7 +249,16 @@ total bill with tip percentage.
 ## BMI Calculator <a name="bmi-calculator"></a>
 Calculate BMI using weight and height
 
-1. Full code.
+1. Output:
+   ```shell
+   Enter the weight to calculate BMI: 78
+   Enter the height in meters to calculate BMI: 5.8
+   2.32
+   
+   Process finished with exit code 0
+
+   ```
+2. Full code.
    ```sh
    # BMI Calculator
    
@@ -313,6 +388,73 @@ Function to find square root of a number.
 
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Even or Odd Number -->
+## Even or Odd Number <a name="even-odd"></a>
+To check if a number is even or odd in python.
+
+1. Output:
+   ```shell
+   Enter the number: 10
+   Number is even!
+   
+   Enter the number: 9
+   Number is odd!
+   
+   Process finished with exit code 0
+
+   ```
+2. Full code.
+   ```sh
+   # Check if a number is even or odd
+   num = int(input("Enter the number: "))
+   if num == 0:
+       print("Number is zero!")
+   elif num % 2 == 0:
+       print("Number is even!")
+   else:
+       print("Number is odd!")
+   ```
+
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- Positive or Negative -->
+## Positive or Negative number <a name="positive-negative"></a>
+To check if a number is positive or negative in python.
+
+We can also do by converting the input to int.
+
+1. Output:
+   ```shell
+   Enter the number: -2
+   You entered Negative number!
+   
+   Process finished with exit code 0
+
+   ```
+2. Full code.
+   ```sh
+   # Check if number is positive or negative or 0
+
+   num = input("Enter the number: ")
+   
+   if num[0] == "-":
+       print("You entered Negative number!")
+   elif num == "0":
+       print("Entered value is 0!")
+   else:
+       print("You entered Positive number!")
+   ```
+
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- Using printf command -->
 ## printf
