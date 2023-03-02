@@ -13,11 +13,12 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
    Algorithms
   <ol>
     <li><a href="#Bill-split-calculator">Bill Split Calcultor</a></li>
+    <li><a href="#bmi-calculator">BMI Calculator</a></li>
     <li><a href="#Celsius-to-Fahrenheit">Celsius to Fahrenheit</a></li>
     <li><a href="#Kilometers-to-miles">Kilometers to miles</a></li>
     <li><a href="#Area-of-Triangle">Area of Triangle</a></li>
     <li><a href="#Split-the-digits-and-add">Split the digits and add</a></li>
-    <li><a href="#Logic-operator-Square-root-(**)">Logic operator Square root (**)</a></li>
+    <li><a href="#Logic-operator-Square-root-(**)">Logic operator Square root (**) </a></li>
     <li><a href="#printf">printf</a></li>
     <li><a href="#add-two-numbers">Add two numbers</a></li>
     <li><a href="#count-charecters-in-a-word">Count characters in a word</a></li>
@@ -175,6 +176,26 @@ total bill with tip percentage.
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- BMI Calculator -->
+## BMI Calculator <a name="bmi-calculator"></a>
+Calculate BMI using weight and height
+
+1. Full code.
+   ```sh
+   # BMI Calculator
+   
+   weight = float(input("Enter the weight to calculate BMI: "))
+   height = float(input("Enter the height in meters to calculate BMI: "))
+   
+   bmi = int( weight / (height * height))
+   
+   print(bmi)
+   ```
+
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- Celsius to fahrenheit ** -->
 ## Celsius to Fahrenheit <a name="Celsius-to-Fahrenheit"></a>
@@ -249,7 +270,7 @@ Later learnt functions don't use Pascal case. `Triangle_Area(base,height)`
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Split the digits and add ** -->
-## Split the digits and add <a name="Split-the-digits-and-add"></a>
+##  Split the digits and add <a name="Split-the-digits-and-add"></a>
 Split the multi digit number and add to get a total.
 
 Cast user input number to string. Loop through string and add each string charecter
@@ -274,7 +295,7 @@ by type casting again back to Int.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- logic operator ** -->
-## Logic operator Square root (**) <a name="Logic-operator-Square-root-(**)"></a>
+##  Logic operator Square root (**) <a name="Logic-operator-Square-root-(**)"></a>
 Function to find square root of a number.
 
 1. function definition.
