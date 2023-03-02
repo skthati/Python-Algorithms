@@ -12,27 +12,27 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 
    Algorithms
   <ol>
-    <li><a href="#Bill-split-calculator">Bill Split Calcultor</a></li>
+    <li><a href="#bill-split-calculator">Bill Split Calcultor</a></li>
     <li><a href="#bmi-calculator">BMI Calculator</a></li>
-    <li><a href="#Celsius-to-Fahrenheit">Celsius to Fahrenheit</a></li>
-    <li><a href="#Kilometers-to-miles">Kilometers to miles</a></li>
-    <li><a href="#Area-of-Triangle">Area of Triangle</a></li>
-    <li><a href="#Split-the-digits-and-add">Split the digits and add</a></li>
-    <li><a href="#Logic-operator-Square-root-(**)">Logic operator Square root (**) </a></li>
+    <li><a href="#celsius-to-fahrenheit">Celsius to Fahrenheit</a></li>
+    <li><a href="#kilometers-to-miles">Kilometers to miles</a></li>
+    <li><a href="#area-of-triangle">Area of Triangle</a></li>
+    <li><a href="#split-the-digits-and-add">Split the digits and add</a></li>
+    <li><a href="#logic-operator-square-root-(**)">Logic operator Square root (**) </a></li>
     <li><a href="#printf">printf</a></li>
     <li><a href="#add-two-numbers">Add two numbers</a></li>
     <li><a href="#count-charecters-in-a-word">Count characters in a word</a></li>
   </ol>
    Games
   <ol>
-    <li><a href="Hangman-game">Hangman Game</a></li>
-    <li><a href="#Dice-roll-for-games">Dice roll for games</a></li>
+    <li><a href="#hangman-game">Hangman Game</a></li>
+    <li><a href="#dice-roll-for-games">Dice roll for games</a></li>
   </ol>
 </details>
 
 
 <!-- Hangman game -->
-## Hangman Game <a name="Hangman-game"></a>
+## Hangman Game <a name="hangman-game"></a>
 A classic word game where the user has to predict the charectors in a word
 before running out of lifes.
 
@@ -103,7 +103,7 @@ before running out of lifes.
 
 
 <!-- Rolling a Dice using randint from random library -->
-## Dice roll for games <a name="Dice-roll-for-games"></a>
+## Dice roll for games <a name="dice-roll-for-games"></a>
 Using randint from random library, simple function to roll the dice.
 
 1. User asked for number of times to roll the dice and parse to int.
@@ -136,7 +136,7 @@ Using randint from random library, simple function to roll the dice.
 
 
 <!-- Bill Split Calculator-->
-## Bill Split Claculator <a name="Bill-split-calculator"></a>
+## Bill Split Claculator <a name="bill-split-calculator"></a>
 Simple calculator which calculates each individual share of
 total bill with tip percentage.
 
@@ -198,7 +198,7 @@ Calculate BMI using weight and height
 
 
 <!-- Celsius to fahrenheit ** -->
-## Celsius to Fahrenheit <a name="Celsius-to-Fahrenheit"></a>
+## Celsius to Fahrenheit <a name="celsius-to-fahrenheit"></a>
 Function to convert Celsius to Fahrenheit..
 
 1. function definition.
@@ -227,7 +227,7 @@ Function to convert Celsius to Fahrenheit..
 
 
 <!-- Kilometers to Miles ** -->
-## Kilometers to miles <a name="Kilometers-to-miles"></a>
+## Kilometers to miles <a name="kilometers-to-miles"></a>
 Function to convert kilometers to miles..
 
 1. function definition.
@@ -252,7 +252,7 @@ Function to convert kilometers to miles..
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Area of Triangle -->
-## Area of Triangle <a name="Area-of-Triangle"></a>
+## Area of Triangle <a name="area-of-triangle"></a>
 Function to find Area of Triangle.
 
 Later learnt functions don't use Pascal case. `Triangle_Area(base,height)` 
@@ -270,7 +270,7 @@ Later learnt functions don't use Pascal case. `Triangle_Area(base,height)`
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Split the digits and add ** -->
-##  Split the digits and add <a name="Split-the-digits-and-add"></a>
+##  Split the digits and add <a name="split-the-digits-and-add"></a>
 Split the multi digit number and add to get a total.
 
 Cast user input number to string. Loop through string and add each string charecter
@@ -295,7 +295,7 @@ by type casting again back to Int.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- logic operator ** -->
-##  Logic operator Square root (**) <a name="Logic-operator-Square-root-(**)"></a>
+##  Logic operator Square root (**) <a name="logic-operator-square-root-(**)"></a>
 Function to find square root of a number.
 
 1. function definition.
