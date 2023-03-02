@@ -8,8 +8,9 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 <!-- TABLE OF CONTENTS -->
 <hr>
 <hr>
+
 <details>
-  <summary>Table of Contents</summary>
+  <summary style="color:blue">Table of Contents</summary>
 
    Algorithms
   <ol>
