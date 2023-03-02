@@ -8,16 +8,16 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 <!-- TABLE OF CONTENTS -->
 
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Table of Contents</h2></summary>
   <ol>
     <li><a href="#add-two-numbers">Add two numbers</a></li>
     <li><a href="#count-charecters-in-a-word">Count characters in a word</a></li>
     <li><a href="#printf">printf</a></li>
-    <li><a href="#Logic operator Square root (**)">Logic operator Square root (**)</a></li>
-    <li><a href="#Area of Triangle">Area of Triangle</a></li>
-    <li><a href="#Dice roll for games">Dice roll for games</a></li>
-    <li><a href="#Kilometers to miles">Kilometers to miles</a></li>
-    <li><a href="#Celsius to Fahrenheit">Celsius to Fahrenheit</a></li>
+    <li><a href="#Logic-operator-Square-root-(**)">Logic operator Square root (**)</a></li>
+    <li><a href="#Area-of-Triangle">Area of Triangle</a></li>
+    <li><a href="#Dice-roll-for-games">Dice roll for games</a></li>
+    <li><a href="#Kilometers-to-miles">Kilometers to miles</a></li>
+    <li><a href="#Celsius-to-Fahrenheit">Celsius to Fahrenheit</a></li>
   </ol>
 </details>
 
@@ -25,7 +25,6 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 ## Bill Split Claculator
 Simple calculator which calculates each individual share of
 total bill with tip percentage.
-
 
 1. Ask for total bill.
    ```sh
@@ -42,9 +41,6 @@ total bill with tip percentage.
    ```
 4. full code.
    ```sh
-
-# Bill Split Calculator
-```sh
    print("Welcome to Bill Split Calculator!")
    
    total_bill = float(input("Enter the total bill amount: "))
@@ -68,7 +64,7 @@ total bill with tip percentage.
 
 
 <!-- Celsius to fahrenheit ** -->
-## Celsius to Fahrenheit
+## Celsius to Fahrenheit <a name="Celsius-to-Fahrenheit"></a>
 Function to convert Celsius to Fahrenheit..
 
 1. function definition.
@@ -97,7 +93,7 @@ Function to convert Celsius to Fahrenheit..
 
 
 <!-- Kilometers to Miles ** -->
-## Kilometers to miles
+## Kilometers to miles <a name="Kilometers-to-miles"></a>
 Function to convert kilometers to miles..
 
 1. function definition.
@@ -122,7 +118,7 @@ Function to convert kilometers to miles..
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Rolling a Dice using randint from random library -->
-## Dice roll for games
+## Dice roll for games <a name="Dice-roll-for-games"></a>
 Using randint from random library, simple function to roll the dice.
 
 
@@ -156,7 +152,7 @@ Using randint from random library, simple function to roll the dice.
 
 
 <!-- Area of Triangle -->
-## Area of Triangle
+## Area of Triangle <a name="Area-of-Triangle"></a>
 Function to find Area of Triangle.
 
 Later learnt functions don't use Pascal case. `Triangle_Area(base,height)` 
@@ -176,7 +172,7 @@ Later learnt functions don't use Pascal case. `Triangle_Area(base,height)`
 
 
 <!-- logic operator ** -->
-## Logic operator Square root (**)
+## Logic operator Square root (**) <a name="Logic-operator-Square-root-(**)"></a>
 Function to find square root of a number.
 
 1. function definition.
