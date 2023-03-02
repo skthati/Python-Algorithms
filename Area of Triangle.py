@@ -5,7 +5,7 @@ base = int(input("Enter the base of a Triangle: "))
 height = int(input("Enter the height of a Triangle: "))
 
 
-def riangle_Area(base,height):
+def Triangle_Area(base,height):
     return (base*height)/2
 
 
