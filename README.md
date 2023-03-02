@@ -6,7 +6,8 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 
 
 <!-- TABLE OF CONTENTS -->
-
+<hr>
+<hr>
 <details>
   <summary>Table of Contents</summary>
 
@@ -29,7 +30,8 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
     <li><a href="#dice-roll-for-games">Dice roll for games</a></li>
   </ol>
 </details>
-
+<hr>
+<hr>
 
 <!-- Hangman game -->
 ## Hangman Game <a name="hangman-game"></a>
