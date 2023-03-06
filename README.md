@@ -1,39 +1,55 @@
 <a name="readme-top"></a>
 
+<div align="center">
+<!-- Title: -->
+  <a href="https://github.com/skthati/Python-Algorithms/">
+    ![Sandeep.png](images%2FSandeep.png)
+  </a>
+  <h1><a href="https://github.com/TheAlgorithms/">Algorithms</a> - Python</h1>
 # Python-Algorithms
 Uploaded all Python Algorithms into this repository which I have coded during Python Course.
 <!-- Back to TOP -->
+
+</div>
 
 
 <!-- TABLE OF CONTENTS -->
 <hr>
 <hr>
 
-<details>
   <summary style="color:blue">Table of Contents</summary>
 
-   Algorithms
+   ### Algorithms
+
   <ol>
     <li><a href="#bill-split-calculator">Bill Split Calcultor</a></li>
     <li><a href="#leap-year">Leap year or Not</a></li>
+    <li><a href="sort-list-without-sort-method">Sort List Without Sort Method</a></li>
+    <li><a href="count-vowels">Count vowels</a></li>
+    <li><a href="repeat-word">Repeat Word</a></li>
     <li><a href="#bmi-calculator">BMI Calculator</a></li>
     <li><a href="#celsius-to-fahrenheit">Celsius to Fahrenheit</a></li>
+    <li><a href="radians-to-degrees">Radians to Degrees</a></li>
     <li><a href="#kilometers-to-miles">Kilometers to miles</a></li>
     <li><a href="#area-of-triangle">Area of Triangle</a></li>
+    <li><a href="compare-x-and-o">Compare x and o in a sentence to return True or False</a></li>
     <li><a href="#split-the-digits-and-add">Split the digits and add</a></li>
     <li><a href="#logic-operator-square-root-(**)">Logic operator Square root (**) </a></li>
+    <li><a href="largest-number-amoung-three-numbers">Largest Number of Three Numbers</a></li>
     <li><a href="positive-negative">Positive or Negative number</a></li>
     <li><a href="even-odd">Even or Odd number</a></li>
     <li><a href="#printf">printf</a></li>
     <li><a href="#add-two-numbers">Add two numbers</a></li>
     <li><a href="#count-charecters-in-a-word">Count characters in a word</a></li>
   </ol>
-   Games
+
+  ### Games
+
   <ol>
     <li><a href="#hangman-game">Hangman Game</a></li>
     <li><a href="#dice-roll-for-games">Dice roll for games</a></li>
   </ol>
-</details>
+
 <hr>
 <hr>
 
@@ -68,6 +84,7 @@ before running out of lifes.
    ```
 4. Full Game code.
    ```sh
+   
    import random
    word_list = ["aardvark", "baboon", "camel", "abruptly", "foxglove", "lengths", "subway",
                  "absurd", "frazzlied", "lucky", "swivel", "azure", "gazebo", "transplant", 
@@ -194,6 +211,147 @@ Check if a year is leap year or not.
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Sort List without using Sort method-->
+## Sort List without python Sort method <a name="sort-list-without-sort-method"></a>
+Using `while` loop append user input to list and sort according to user choice.
+
+[ ] Ascending
+[ ] Descending
+[ ] None.
+
+
+1. Output:
+   ```sh
+   Enter the new list value or 'c' to quit: 25
+   Enter the new list value or 'c' to quit: 49
+   Enter the new list value or 'c' to quit: 19
+   Enter the new list value or 'c' to quit: 4
+   Enter the new list value or 'c' to quit: c
+   ['25', '49', '19', '4']
+   Enter 'asc' or 'desc' or 'none' to sort the list: asc
+   ['4', '19', '25', '49']
+   
+   Process finished with exit code 0
+   ```
+2. Loop through user input until user types `c`.
+   ```sh
+   while x < 100:
+    temp = input("Enter the new list value or 'c' to quit: ")
+    if temp == "c":
+        break
+    else:
+        lists.append(temp)
+        x+=1
+   print(lists)
+   
+   ```
+
+3. Ask for `asc` or `desc` or `none`.
+   ```sh
+   y = 0
+   while y < 3:
+    if y == 0:
+        sort = input("Enter 'asc' or 'desc' or 'none' to sort the list: ")
+    else:
+        sort = input("Enter again 'asc' or 'desc' or 'none' to sort the list: ")
+    
+    if (sort == "asc" or sort == "desc" or sort == "none"):
+        print(list_sorting(lists, sort))
+        break 
+    else:
+        y+=1
+   ```
+4. full code.
+   ```sh
+   # Sort a list
+   
+   lists = []
+   sorted_list = []
+   x = 0
+   
+   def list_sorting(lists, sort):
+       
+       for i in range(len(lists)):
+           a = 0
+           for j in range(len(lists)):
+               if a < int(lists[j]) :
+                   a = int(lists[j])
+           a = str(a)
+           sorted_list.append(a)
+           lists.remove(a)
+       
+       if sort == "desc":
+           return sorted_list
+       elif sort == "asc":
+           sorted_list.reverse()
+           return sorted_list
+       elif sort == "none":
+           print(lists)
+   
+   while x < 100:
+       temp = input("Enter the new list value or 'c' to quit: ")
+       if temp == "c":
+           break
+       else:
+           lists.append(temp)
+           x+=1
+   print(lists)
+   
+   y = 0
+   while y < 3:
+       if y == 0:
+           sort = input("Enter 'asc' or 'desc' or 'none' to sort the list: ")
+       else:
+           sort = input("Enter again 'asc' or 'desc' or 'none' to sort the list: ")
+       
+       if (sort == "asc" or sort == "desc" or sort == "none"):
+           print(list_sorting(lists, sort))
+           break 
+       else:
+           y+=1
+
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+---
+
+<!-- Repeat characters in a word -->
+## Repeat characters in a word <a name="count-vowels"></a>
+To repeat characters in a word or sentence.
+
+1. Output:
+   ```shell
+   Enter the string to count vowels: Hello World
+   3
+
+   Process finished with exit code 0
+   ```
+2. Full code.
+   ```sh
+   sentance_count = input("Enter the string to count vowels: ")
+   
+   final_count = 0
+   
+   for i in "aeiou":
+       a = 0
+       a = sentance_count.count(i)
+       final_count = final_count + a
+   
+   print(final_count)
+    
+   ```
+
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+
 <!-- Bill Split Calculator-->
 ## Bill Split Claculator <a name="bill-split-calculator"></a>
 Simple calculator which calculates each individual share of
@@ -275,15 +433,52 @@ Calculate BMI using weight and height
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- Celsius to fahrenheit ** -->
+<!-- Largest Number among three numbers ** -->
+## Largest number among three numbers  <a name="largest-number-amoung-three-numbers"></a>
+Using hierarchical if-else statements, find the biggest number amoung three user
+input numbers.
+
+Not using lists or dictionary.
+
+1. Output.
+   ```sh
+   Enter your first number: 14
+   Enter your second number: 28
+   Enter your third number: 34
+   34 c1 is biggest number!
+   ```
+2. Full code.
+   ```sh
+
+   # Largest number in 3
+   
+   a = int(input("Enter your first number: "))
+   b = int(input("Enter your second number: "))
+   c = int(input("Enter your third number: "))
+   
+   if a > b:
+       if a > c:
+           print(f'{a} a is biggest number!')
+       else:
+           print(f'{c} c is biggest number!')
+   elif b > c:
+       print(f'{b} b is biggest number!')
+   else:
+       print(f'{c} c1 is biggest number!')    
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Celsius to Fahrenheit ** -->
 ## Celsius to Fahrenheit <a name="celsius-to-fahrenheit"></a>
-Function to convert Celsius to Fahrenheit..
+Simple function to convert Celsius to Fahrenheit..
 
 1. function definition.
    ```sh
    def cels_fahr(cels1):
     return ((cels1 * (9/5)) + 32)
-   
    ```
 2. function instance
    ```sh
@@ -291,17 +486,44 @@ Function to convert Celsius to Fahrenheit..
    ```
 3. full code.
    ```sh
+   # celsius to fahrenheit
+   
    cels1 = int(input("Enter the temperature value in Celsius"))
-
+   
    def cels_fahr(cels1):
-    return ((cels1 * (9/5)) + 32)
+       return ((cels1 * (9/5)) + 32)
    fahr = cels_fahr(cels1)
-
+   
    print(f'{cels1} Celsius in Fahrenheit is {fahr}!')   
    ```
 
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Radians to Degrees ** -->
+## Radians to Degrees <a name="radians-to-degrees"></a>
+Simple code to convert Radians to Degrees..
+
+
+1. full code.
+   ```sh
+   # Radians to Degrees
+   
+   angle = float(input("Enter the radians to convert to degrees: "))
+   
+   radians = 180/3.14159
+   total_radians = angle * radians
+   
+   total_radians = round(total_radians, 4)
+   
+   print(total_radians) 
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+---
 
 
 <!-- Kilometers to Miles ** -->
@@ -346,6 +568,47 @@ Later learnt functions don't use Pascal case. `Triangle_Area(base,height)`
    ```
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Function compare x and o to return true or false -->
+## Function to compare x and o to return true or false <a name="compare-x-and-o"></a>
+Count and compare "x" and "o" in a sentence and return True or False
+
+1. Output:
+   ```shell
+   Enter the sentence to count X's and O's: xxoooxxooxxxoooxxxxooxoxoooxxxooxxoox
+   False
+   
+   Process finished with exit code 0
+
+   ```
+2. Full code.
+   ```sh
+   
+   sentence = input("Enter the sentence to count X's and O's: ")
+   
+   def compare_sentence(sentence):
+       x_count = 0
+       o_count = 0
+       
+       for i in sentence:
+           x_count = sentence.count("x")
+           
+       for j in sentence:
+           o_count = sentence.count("o")
+           
+       if x_count == o_count:
+           return True
+       else:
+           return False
+   
+   print(compare_sentence(sentence))
+
+   ```
+
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- Split the digits and add ** -->
 ##  Split the digits and add <a name="split-the-digits-and-add"></a>

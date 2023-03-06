@@ -16,4 +16,3 @@ def share_calculator(total_bill, total_tip, split_count):
 individual_share = share_calculator(total_bill, total_tip, split_count)
 final_total = total_bill + total_tip
 print(f'Your total bill with Tip is {final_total} and each individual share is {individual_share}')
-
