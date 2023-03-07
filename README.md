@@ -22,27 +22,27 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
    ### Algorithms
 
   <ol>
-    <li><a href="ceasar-cipher">Ceasar Cipher Encode or Decode</a></li>
-    <li><a href="dictionaries-calculate-higgest-bidder">Using Dictionaries Calculate highest bidder</a> </li>
-    <li><a href="bill-split-calculator">Bill Split Calcultor</a></li>
-    <li><a href="leap-year">Leap year or Not</a></li>
-    <li><a href="prime-number">Check Prime Number</a></li>
-    <li><a href="password-generator">Password Generator</a></li>
-    <li><a href="sort-list-without-sort-method">Sort List Without Sort Method</a></li>
-    <li><a href="count-vowels">Count vowels</a></li>
-    <li><a href="repeat-word">Repeat Word</a></li>
+    <li><a href="#ceasar-cipher">Ceasar Cipher Encode or Decode</a></li>
+    <li><a href="#dictionaries-calculate-higgest-bidder">Using Dictionaries Calculate highest bidder</a> </li>
+    <li><a href="#bill-split-calculator">Bill Split Calcultor</a></li>
+    <li><a href="#leap-year">Leap year or Not</a></li>
+    <li><a href="#prime-number">Check Prime Number</a></li>
+    <li><a href="#password-generator">Password Generator</a></li>
+    <li><a href="#sort-list-without-sort-method">Sort List Without Sort Method</a></li>
+    <li><a href="#count-vowels">Count vowels</a></li>
+    <li><a href="#repeat-word">Repeat Word</a></li>
     <li><a href="#bmi-calculator">BMI Calculator</a></li>
     <li><a href="#celsius-to-fahrenheit">Celsius to Fahrenheit</a></li>
-    <li><a href="radians-to-degrees">Radians to Degrees</a></li>
+    <li><a href="#radians-to-degrees">Radians to Degrees</a></li>
     <li><a href="#kilometers-to-miles">Kilometers to miles</a></li>
     <li><a href="#area-of-triangle">Area of Triangle</a></li>
-    <li><a href="compare-x-and-o">Compare x and o in a sentence to return True or False</a></li>
+    <li><a href="#compare-x-and-o">Compare x and o in a sentence to return True or False</a></li>
     <li><a href="#split-the-digits-and-add">Split the digits and add</a></li>
     <li><a href="#logic-operator-square-root-(**)">Logic operator Square root (**) </a></li>
-    <li><a href="largest-number-amoung-three-numbers">Largest Number of Three Numbers</a></li>
-    <li><a href="replace-space-with-star">Replace space with star(*)</a> </li>
-    <li><a href="positive-negative">Positive or Negative number</a></li>
-    <li><a href="even-odd">Even or Odd number</a></li>
+    <li><a href="#largest-number-amoung-three-numbers">Largest Number of Three Numbers</a></li>
+    <li><a href="#replace-space-with-star">Replace space with star(*)</a> </li>
+    <li><a href="#positive-negative">Positive or Negative number</a></li>
+    <li><a href="#even-odd">Even or Odd number</a></li>
     <li><a href="#printf">printf</a></li>
     <li><a href="#add-two-numbers">Add two numbers</a></li>
     <li><a href="#count-charecters-in-a-word">Count characters in a word</a></li>
@@ -52,7 +52,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 
   <ol>
     <li><a href="#hangman-game">Hangman Game</a></li>
-    <li><a href="rock-paper-scissor-game">Rock Paper Scissor Game</a></li>
+    <li><a href="#rock-paper-scissor-game">Rock Paper Scissor Game</a></li>
     <li><a href="#dice-roll-for-games">Dice roll for games</a></li>
   </ol>
 
