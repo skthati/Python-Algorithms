@@ -22,8 +22,12 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
    ### Algorithms
 
   <ol>
-    <li><a href="#bill-split-calculator">Bill Split Calcultor</a></li>
-    <li><a href="#leap-year">Leap year or Not</a></li>
+    <li><a href="ceasar-cipher">Ceasar Cipher Encode or Decode</a></li>
+    <li><a href="dictionaries-calculate-higgest-bidder">Using Dictionaries Calculate highest bidder</a> </li>
+    <li><a href="bill-split-calculator">Bill Split Calcultor</a></li>
+    <li><a href="leap-year">Leap year or Not</a></li>
+    <li><a href="prime-number">Check Prime Number</a></li>
+    <li><a href="password-generator">Password Generator</a></li>
     <li><a href="sort-list-without-sort-method">Sort List Without Sort Method</a></li>
     <li><a href="count-vowels">Count vowels</a></li>
     <li><a href="repeat-word">Repeat Word</a></li>
@@ -36,6 +40,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
     <li><a href="#split-the-digits-and-add">Split the digits and add</a></li>
     <li><a href="#logic-operator-square-root-(**)">Logic operator Square root (**) </a></li>
     <li><a href="largest-number-amoung-three-numbers">Largest Number of Three Numbers</a></li>
+    <li><a href="replace-space-with-star">Replace space with star(*)</a> </li>
     <li><a href="positive-negative">Positive or Negative number</a></li>
     <li><a href="even-odd">Even or Odd number</a></li>
     <li><a href="#printf">printf</a></li>
@@ -47,6 +52,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 
   <ol>
     <li><a href="#hangman-game">Hangman Game</a></li>
+    <li><a href="rock-paper-scissor-game">Rock Paper Scissor Game</a></li>
     <li><a href="#dice-roll-for-games">Dice roll for games</a></li>
   </ol>
 
@@ -125,6 +131,95 @@ before running out of lifes.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Rock Paper Scissor Game -->
+## Rock Paper Scissor Game <a name="rock-paper-scissor-game"></a>
+Simple hand game to form a shape and has below rules.
+[ ] Rock wins Scissor
+[ ] Scissor wins Paper
+[ ] paper wins Rock
+
+1. User inputs their choice.
+   ```sh
+   player_choice = input("rock, paper, scissors, Enter your choice: ")
+   ```
+2. Using random function to generate computer choice.
+   ```sh
+   all_list = ['rock', 'paper', 'scissors']
+   computer_choice = random.choice(all_list)
+   ```
+3. Full code..
+   ```sh
+   import random
+   
+   rock = '''
+       _______
+   ---'   ____)
+         (_____)
+         (_____)
+         (____)
+   ---.__(___)
+   '''
+   
+   paper = '''
+       _______
+   ---'   ____)____
+             ______)
+             _______)
+            _______)
+   ---.__________)
+   '''
+   
+   scissors = '''
+       _______
+   ---'   ____)____
+             ______)
+          __________)
+         (____)
+   ---.__(___)
+   '''
+   
+   #Write your code below this line 👇
+   
+   
+   player_choice = input("rock, paper, scissors, Enter your choice: ")
+   
+   print(f"Your choice is: {player_choice}")
+   if player_choice == "rock":
+     print(rock)
+   elif player_choice == "paper":
+     print(paper)
+   else:
+     print(scissors)
+   
+   all_list = ['rock', 'paper', 'scissors']
+   computer_choice = random.choice(all_list)
+   
+   print(f"Computer choice is: {computer_choice}")
+   
+   if computer_choice == "rock":
+     print(rock)
+   elif computer_choice == "paper":
+     print(paper)
+   else:
+     print(scissors)
+   
+   if player_choice == computer_choice:
+     print("Draw")
+   elif player_choice == "rock" and (computer_choice == "scissors"):
+     print("Player wins!")
+   elif player_choice == "paper" and (computer_choice == 'rock'):
+     print('Player wins')
+   elif player_choice == "scissors" and (computer_choice == 'paper'):
+     print("Player wins!")
+   else:
+     print("Computer wins!")
+  
+   ```
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 <!-- Rolling a Dice using randint from random library -->
 ## Dice roll for games <a name="dice-roll-for-games"></a>
 Using randint from random library, simple function to roll the dice.
@@ -153,6 +248,143 @@ Using randint from random library, simple function to roll the dice.
     else:
         print(random.randint(0,5))
         i=i+1
+   ```
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- Ceasar Cipher -->
+## Ceasar Cipher Encode or Decode <a name="ceasar-cipher"></a>
+Ceasar Cipher is encoding or decoding method by shifting the letters to yield
+encode or decode.
+
+1) String to be encoded or decoded.
+2) `code` is to accept how many letters has to be shifted.
+3) Whether to encode or decode a string.
+
+![Caesar_cipher_left_shift_of_3.svg.png](images%2FCaesar_cipher_left_shift_of_3.svg.png)
+
+
+1. Output.
+   ```sh
+   Enter the string: Hello
+   Input the code: 1
+   Encode or Decode: encode
+   ifmmp
+   Press any key to play again or 'x' to quit: 
+   Enter the string: ifmmp
+   Input the code: 1
+   Encode or Decode: decode
+   hello
+   Press any key to play again or 'x' to quit: x
+   
+   Process finished with exit code 0
+
+   ```
+2. Full code.
+   ```sh
+   alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+               'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+   
+   game_state = True
+   while game_state:
+    text = (input("Enter the string: ")).lower()
+    code = int(input("Input the code: "))
+    game_code = (input("Encode or Decode: ")).lower()
+    old_text_index = []
+    new_i = 0
+    new_text = ""
+    if game_code == "encode":    
+        for i in text:
+            if i == " ":
+                new_text+=i
+            else:
+                if i in alphabet:
+                    x = alphabet.index(i)
+                    new_i = x + code
+                    if new_i > 25:
+                        new_i = new_i - 26
+                    new_text+=alphabet[new_i]
+
+        print(new_text)
+    elif game_code == "decode":
+        for i in text:
+            if i == " ":
+                new_text+=i
+            else:
+                if i in alphabet:
+                    x = alphabet.index(i)
+                    new_i = x - code
+                    if new_i < 0:
+                        new_i = new_i + 26
+                    new_text+=alphabet[new_i]
+        print(new_text)
+         
+    play_again = (input("Press any key to play again or 'x' to quit: ")).lower()
+    if play_again == "x":
+        game_state = False
+    else:
+        game_state = True
+
+   ```
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Higgest Bidder -->
+## Calculate highest bidder <a name="dictionaries-calculate-higgest-bidder"></a>
+Find who bid highest and display the result. 
+
+1) Store the bidder name and bidder amount into dictionary.
+
+
+1. Output.
+   ```sh
+   Enter your name: Charlie
+   Enter your bid amount: 10
+   For more bidding press any key or 'x' to stop bidding: 
+   Enter your name: Mike
+   Enter your bid amount: 25
+   For more bidding press any key or 'x' to stop bidding: 
+   Enter your name: Oscar
+   Enter your bid amount: 49
+   For more bidding press any key or 'x' to stop bidding: x
+   Below are the bids!
+   {'Charlie': '10', 'Mike': '25', 'Oscar': '49'}
+   Highest bidder is : 
+   Oscar and bid amount is 49!
+   
+   Process finished with exit code 0
+
+   ```
+2. Full code.
+   ```sh
+   bd_dic = {}
+   game_state = True
+   while game_state:
+       nm = input("Enter your name: ")
+       bd = input("Enter your bid amount: ")
+       
+       bd_dic[nm] = bd
+       
+       gm_s = (input("For more bidding press any key or 'x' to stop bidding: ")).lower()
+       if gm_s == "x":
+           game_state = False
+       else:
+           game_state = True
+   
+   print("Below are the bids!")
+   print(bd_dic)
+   print("Highest bidder is : ")
+   a = 0
+   for bid in bd_dic:
+       if int(bd_dic[bid]) > a :
+           a = int(bd_dic[bid])
+   
+   for bid in bd_dic:
+       if int(bd_dic[bid]) == a :
+           print(f'{bid} and bid amount is {bd_dic[bid]}!')
    ```
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -210,6 +442,7 @@ Check if a year is leap year or not.
 
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- Sort List without using Sort method-->
 ## Sort List without python Sort method <a name="sort-list-without-sort-method"></a>
@@ -310,6 +543,82 @@ Using `while` loop append user input to list and sort according to user choice.
        else:
            y+=1
 
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Password Generator-->
+## Password Generator <a name="password-generator"></a>
+Ask user about how complex the generated password should be and 
+generate password from the list using random method.
+
+Also shuffle the generated password to make it more complex.
+
+[ ] How many Letters?
+[ ] How many Numbers?
+[ ] How many Symbols?
+
+
+1. Output:
+   ```sh
+   Welcome to the PyPassword Generator!
+   How many letters would you like in your password?
+   4
+   How many symbols would you like?
+   1
+   How many numbers would you like?
+   2
+   ['h', 'H', 'A', 'x', '3', '(', '$']
+   hHAx3($
+   h$3Hx(A
+   
+   Process finished with exit code 0
+   ```
+
+2. Ask for `letters` , `numbers` and `symbols`.
+   ```sh
+   print("Welcome to the PyPassword Generator!")
+   nr_letters= int(input("How many letters would you like in your password?\n")) 
+   nr_symbols = int(input(f"How many symbols would you like?\n"))
+   nr_numbers = int(input(f"How many numbers would you like?\n"))
+   ```
+   
+3. full code.
+   ```sh
+   #Password Generator Project
+   import random
+   letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+   numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+   symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+   
+   print("Welcome to the PyPassword Generator!")
+   nr_letters= int(input("How many letters would you like in your password?\n")) 
+   nr_symbols = int(input(f"How many symbols would you like?\n"))
+   nr_numbers = int(input(f"How many numbers would you like?\n"))
+   
+   #Eazy Level - Order not randomised:
+   #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
+   l = random.sample(letters, nr_letters)
+   s = random.sample(numbers, nr_symbols)
+   n = random.sample(symbols, nr_numbers)
+   f = l+s+n
+   
+   print(f)
+   a=""
+   for i in f:
+     a+=i
+   print(a)
+   
+   #Hard Level - Order of characters randomised:
+   #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+   
+   random.shuffle(f)
+   b=""
+   for j in f:
+     b+=j
+   print(b)
    ```
 
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
@@ -428,6 +737,50 @@ Calculate BMI using weight and height
    print(bmi)
    ```
 
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Prime Number -->
+## Check if a given number is prime or not.<a name="prime-number"></a>
+Count and compare "x" and "o" in a sentence and return True or False
+
+1. Output:
+   ```shell
+   Check this number: 15
+   It's not a prime number.
+   [0, 3, 0, 3, 1, 7, 6, 5, 4, 3, 2, 1]
+   
+   Process finished with exit code 0
+   ```
+2. Full code.
+   ```sh
+    #Write your code below this line 👇
+    def prime_checker(number):
+    list_p = []
+    if number < 2 or number == 4:
+        print("It's not a prime number.")
+    elif number == 2 or number == 3:
+        print("It's a prime number.")
+    else:
+        for i in range(3, number):
+            # list_p.append([number%i, i])
+            list_p.append(number%i)
+        if 0 in list_p:
+            print("It's not a prime number.")
+        else:
+            print("It's a prime number.")
+    print(list_p)       
+    
+    #Write your code above this line 👆
+        
+    #Do NOT change any of the code below👇
+    n = int(input("Check this number: "))
+    prime_checker(number=n)
+
+
+   ```
 
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -569,6 +922,36 @@ Later learnt functions don't use Pascal case. `Triangle_Area(base,height)`
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<!-- Replace space with star(*) -->
+## Replace space with star<a name="replace-space-with-star"></a>
+Replace space with star.
+
+1. Output:
+   ```shell
+   Hello*I*am*Sandeep
+   
+   Process finished with exit code 0
+
+   ```
+2. Full code.
+   ```sh
+   word = "Hello I am Sandeep"
+   n_word = ""
+   for i in word:
+       if i == " ":
+           n_word+="*"
+       else:
+           n_word+=i
+   print(n_word)
+
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 <!-- Function compare x and o to return true or false -->
 ## Function to compare x and o to return true or false <a name="compare-x-and-o"></a>
 Count and compare "x" and "o" in a sentence and return True or False
@@ -634,6 +1017,30 @@ by type casting again back to Int.
 
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Find  Largest Number from List -->
+## Find Largest Number From List<a name="largest-number"></a>
+Find Largest number from list using for loop.
+
+1. Full code.
+   ```sh
+   numbers = [23, 45, 57, 494, 437, 4849, 4,487,345]
+   
+   x = 0
+   
+   for i in numbers:
+       if i > x:
+           x = i
+   
+   print(x)
+   
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- logic operator ** -->
 ##  Logic operator Square root (**) <a name="logic-operator-square-root-(**)"></a>
