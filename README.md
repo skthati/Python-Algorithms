@@ -51,6 +51,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
   ### Games
 
   <ol>
+    <li><a href="#tic-tac-toe">Tic Tac Toe Game</a> </li>
     <li><a href="#hangman-game">Hangman Game</a></li>
     <li><a href="#rock-paper-scissor-game">Rock Paper Scissor Game</a></li>
     <li><a href="#dice-roll-for-games">Dice roll for games</a></li>
@@ -58,6 +59,171 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 
 <hr>
 <hr>
+
+<!-- Tic Tac Toe Game -->
+## Tic Tac Toe game <a name="tic-tac-toe"></a>
+A classic Tic Tac Toe game where 2 players takes turns marking the spaces in three by three grid.
+
+Player who marks horizontal, vertical or diagonal row is the winner.
+
+1. Three by three rows.
+   ```sh
+    row1 = ["⬜️", "️⬜️", "️⬜️"]
+    row2 = ["⬜️", "⬜️", "️⬜️"]
+    row3 = ["⬜️️", "⬜️️", "⬜️️"]
+   ```
+2. Output:
+   ```sh
+   Welcome to tik tok toe Game!
+   ['⬜️', '️⬜️', '️⬜️']
+   ['⬜️', '⬜️', '️⬜️']
+   ['⬜️️', '⬜️️', '⬜️️']
+   Press anykey to start the game or 'c' for computer to start the game: 
+   Type your choice: 2 2
+   ['⬜️', '️⬜️', '️⬜️']
+   ['⬜️', '⬜️', '️⬜️']
+   ['⬜️️', '⬜️️', 'X']
+   Not enough data to check winner
+   ['⬜️', '️⬜️', '️⬜️']
+   ['O', '⬜️', '️⬜️']
+   ['⬜️️', '⬜️️', 'X']
+   Not enough data to check winner
+   Type your choice: 2 1
+   ['⬜️', '️⬜️', '️⬜️']
+   ['O', '⬜️', '️⬜️']
+   ['⬜️️', 'X', 'X']
+   Not enough data to check winner
+   ['⬜️', '️⬜️', '️⬜️']
+   ['O', 'O', '️⬜️']
+   ['⬜️️', 'X', 'X']
+   Not enough data to check winner
+   Type your choice: 0 0
+   ['X', '️⬜️', '️⬜️']
+   ['O', 'O', '️⬜️']
+   ['⬜️️', 'X', 'X']
+   Checking winner!
+   No winner yet.
+   ['X', '️⬜️', '️⬜️']
+   ['O', 'O', '️⬜️']
+   ['O', 'X', 'X']
+   Checking winner!
+   No winner yet.
+   Type your choice: 0 1
+   ['X', 'X', '️⬜️']
+   ['O', 'O', '️⬜️']
+   ['O', 'X', 'X']
+   Checking winner!
+   No winner yet.
+   ['X', 'X', 'O']
+   ['O', 'O', '️⬜️']
+   ['O', 'X', 'X']
+   Checking winner!
+   Computer wins!
+   
+   Process finished with exit code 0
+   ```
+
+4. Full Game code.
+   ```sh
+   
+   import random
+   import sys
+   
+   start_game = True
+   play_again = False
+   player_turn = True
+   computer_win = []
+   player_win = []
+   game_win = False
+   print("Welcome to tik tok toe Game!")
+   win_lst = [[(0, 0), (0, 1), (0, 2)], [(1, 0), (1, 1), (1, 2)], [(2, 0), (2, 1), (2, 2)],
+              [(0, 0), (1, 0), (2, 0)], [(0, 1), (1, 1), (2, 1)], [(0, 2), (1, 2), (2, 2)],
+              [(0, 0), (1, 1), (2, 2)], [(2, 0), (1, 1), (0, 2)]]
+   
+   
+   def check_winner():
+       if len(player_win) < 3 and len(computer_win) < 3:
+           # print("\033[7A       \033[7A")
+           # print(f"{row1}\n{row2}\n{row3}")
+           print("Not enough data to check winner")
+       else:
+           print("Checking winner!")
+           for item in win_lst:
+               p_lst = []
+               c_lst = []
+               for i in player_win:
+                   if i in item:
+                       p_lst.append(i)
+   
+               if len(p_lst) == 3:
+                   print("Player wins!")
+                   exit()
+   
+               for j in computer_win:
+                   if j in item:
+                       c_lst.append(j)
+   
+               if len(c_lst) == 3:
+                   print("Computer wins!")
+                   exit()
+           print("No winner yet.")
+   
+   def random_num():
+       return random.randint(0, 2)
+   
+   
+   def computer_game():
+       a = random_num()
+       b = random_num()
+       loop = True
+       while loop:
+           # print("Computer turn!")
+           pos = map1[a][b]
+           # print(pos)
+           if pos == "X" or pos == "O":
+               # if pos == "⬜️️":
+               a = random_num()
+               b = random_num()
+           else:
+               map1[a][b] = "O"
+               computer_win.append((a, b))
+               loop = False
+               print(f"{row1}\n{row2}\n{row3}")
+               check_winner()
+   
+   
+   def player_game():
+       a, b = input("Type your choice: ").split()
+       a = int(a)
+       b = int(b)
+       map1[a][b] = "X"
+       player_win.append((a, b))
+       print(f"{row1}\n{row2}\n{row3}")
+       check_winner()
+   
+   
+   while start_game:
+       row1 = ["⬜️", "️⬜️", "️⬜️"]
+       row2 = ["⬜️", "⬜️", "️⬜️"]
+       row3 = ["⬜️️", "⬜️️", "⬜️️"]
+       map1 = [row1, row2, row3]
+       print(f"{row1}\n{row2}\n{row3}")
+   
+       player_turn_input = input("Press anykey to start the game or 'c' for computer to start the game: ").lower()
+       if player_turn_input == "c":
+           while not game_win:
+               computer_game()
+               player_game()
+       else:
+           while not game_win:
+               player_game()
+               computer_game()
+
+   ```
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- Hangman game -->
 ## Hangman Game <a name="hangman-game"></a>
