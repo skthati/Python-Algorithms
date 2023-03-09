@@ -5,12 +5,13 @@
   <a href="https://github.com/skthati/Python-Algorithms/">
     ![Sandeep.png](images%2FSandeep.png)
   </a>
-  <h1><a href="https://github.com/skthati/Python-Algorithms</a> - Python</h1>
+  <h1><a href="https://github.com/skthati/Python-Algorithms/">Algorithms</a> - Python</h1>
 # Python-Algorithms
 Uploaded all Python Algorithms into this repository which I have coded during Python Course.
 <!-- Back to TOP -->
 
 </div>
+
 
 <!-- TABLE OF CONTENTS -->
 <hr>
