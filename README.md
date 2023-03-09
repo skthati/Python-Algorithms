@@ -12,7 +12,6 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
 
 </div>
 
-
 <!-- TABLE OF CONTENTS -->
 <hr>
 <hr>
