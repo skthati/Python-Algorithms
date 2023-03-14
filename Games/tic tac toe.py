@@ -28,6 +28,7 @@ def check_winner():
             for i in player_win:
                 if i in item:
                     p_lst.append(i)
+            # p_lst = [i for i in player_win if i in item]
 
             if len(p_lst) == 3:
                 print("Player wins!")
