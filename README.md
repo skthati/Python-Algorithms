@@ -32,6 +32,7 @@ Uploaded all Python Algorithms into this repository which I have coded during Py
     <li><a href="#count-vowels">Count vowels</a></li>
     <li><a href="#repeat-word">Repeat Word</a></li>
     <li><a href="#bmi-calculator">BMI Calculator</a></li>
+    <li><a href="#arthmetic-calculator">Arthmetic Calculator</a></li>
     <li><a href="#celsius-to-fahrenheit">Celsius to Fahrenheit</a></li>
     <li><a href="#radians-to-degrees">Radians to Degrees</a></li>
     <li><a href="#kilometers-to-miles">Kilometers to miles</a></li>
@@ -950,6 +951,102 @@ Count and compare "x" and "o" in a sentence and return True or False
 
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- Arthmetic Calculator -->
+## Arthmetic Calculator<a name="arthmetic-calculator"></a>
+Simple calculator app for addition, substraction, multiplication and division.
+
+[ ]New Calculations
+[ ]Continue calculations from result
+[ ]Start again new calculation
+
+1. Output:
+   ```shell
+   
+    _____________________
+   |  _________________  |
+   | | Sandeep   0. | |  .----------------.  .----------------.  .----------------.  .----------------. 
+   | |_________________| | | .--------------. || .--------------. || .--------------. || .--------------. |
+   |  ___ ___ ___   ___  | | |     ______   | || |      __      | || |   _____      | || |     ______   | |
+   | | 7 | 8 | 9 | | + | | | |   .' ___  |  | || |     /  \     | || |  |_   _|     | || |   .' ___  |  | |
+   | |___|___|___| |___| | | |  / .'   \_|  | || |    / /\ \    | || |    | |       | || |  / .'   \_|  | |
+   | | 4 | 5 | 6 | | - | | | |  | |         | || |   / ____ \   | || |    | |   _   | || |  | |         | |
+   | |___|___|___| |___| | | |  \ `.___.'\  | || | _/ /    \ \_ | || |   _| |__/ |  | || |  \ `.___.'\  | |
+   | | 1 | 2 | 3 | | x | | | |   `._____.'  | || ||____|  |____|| || |  |________|  | || |   `._____.'  | |
+   | |___|___|___| |___| | | |              | || |              | || |              | || |              | |
+   | | . | 0 | = | | / | | | '--------------' || '--------------' || '--------------' || '--------------' |
+   | |___|___|___| |___| |  '----------------'  '----------------'  '----------------'  '----------------' 
+   |_____________________|
+
+   Enter your first digit: 3
+      + 
+      - 
+      * 
+      / 
+   Pick an operator: +
+   Enter your second digit: 2
+   3.0 + 2.0 = 5.0
+   Type 'c' to continue calculation or 'x' to quit or 'n' for new calculation. c
+      + 
+      - 
+      * 
+      / 
+   Pick an operator: *
+   Enter your second digit: 2
+   3.0 * 2.0 = 10.0
+   Type 'c' to continue calculation or 'x' to quit or 'n' for new calculation. n
+   Enter your first digit: 5
+      + 
+      - 
+      * 
+      / 
+   Pick an operator: *
+   Enter your second digit: 340
+   5.0 * 340.0 = 1700.0
+   Type 'c' to continue calculation or 'x' to quit or 'n' for new calculation. x
+   ```
+2. Full code.
+   ```sh
+   cal = True
+   fir = True
+   
+   def calculator(input1, input2, operator1):
+       if operator1 == "+":
+           return input1 + input2
+       elif operator1 == "-":
+           return input1 - input2
+       elif operator1 == "*":
+           return input1 * input2
+       elif operator1 == "/":
+           return input1 / input2
+   
+   
+   while cal:
+       if fir:
+           input1 = float(input("Enter your first digit: "))
+       operator1 = input(f" + \n - \n * \n / \nPick an operator: ")
+       input2 = float(input("Enter your second digit: "))
+       result = calculator(input1, input2, operator1)
+       print(f"{input1} {operator1} {input2} = {result}")
+       again = (input(f"Type 'c' to continue calculation or 'x' to quit or 'n' for new calculation. ")).lower()
+       if again == "c":
+           input1 = result
+           fir = False
+           cal = True
+       elif again == "n":
+           fir = True
+           cal = True
+       elif again == "x":
+           cal = False
+   
+
+   ```
+
+<a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 <!-- Largest Number among three numbers ** -->
