@@ -68,13 +68,13 @@ A classic Tic Tac Toe game where 2 players takes turns marking the spaces in thr
 Player who marks horizontal, vertical or diagonal row is the winner.
 
 1. Three by three rows.
-   ```sh
+   ```Python
     row1 = ["⬜️", "️⬜️", "️⬜️"]
     row2 = ["⬜️", "⬜️", "️⬜️"]
     row3 = ["⬜️️", "⬜️️", "⬜️️"]
    ```
 2. Output:
-   ```sh
+   ```Python
    Welcome to tik tok toe Game!
    ['⬜️', '️⬜️', '️⬜️']
    ['⬜️', '⬜️', '️⬜️']
@@ -125,7 +125,7 @@ Player who marks horizontal, vertical or diagonal row is the winner.
    ```
 
 4. Full Game code.
-   ```sh
+   ```Python
    
    import random
    import sys
@@ -232,11 +232,11 @@ A classic word game where the user has to predict the charectors in a word
 before running out of lifes.
 
 1. Using `random.choice` a word is selected from word list.
-   ```sh
+   ```Python
    chosen_word = random.choice(word_list)
    ```
 2. Letters in that word are replaced with `"_"` using for loop and displayed.
-   ```sh
+   ```Python
    display = []
    for i in chosen_word:
      display.append("_")
@@ -244,7 +244,7 @@ before running out of lifes.
    ```
 3. Game is looped until no game lifes. Every wrong guess, game life is increased. Every right guess `"_"` is 
     replaced with right guessed charecter. Using while loop and game state.
-   ```sh
+   ```Python
    while not end_of_game:
      if "_" in display and game_life <= 10:
        guess = input("Guess a letter: ").lower()
@@ -256,7 +256,7 @@ before running out of lifes.
            game_life = game_life+1
    ```
 4. Full Game code.
-   ```sh
+   ```Python
    
    import random
    word_list = ["aardvark", "baboon", "camel", "abruptly", "foxglove", "lengths", "subway",
@@ -306,16 +306,16 @@ Simple hand game to form a shape and has below rules.
 [ ] paper wins Rock
 
 1. User inputs their choice.
-   ```sh
+   ```Python
    player_choice = input("rock, paper, scissors, Enter your choice: ")
    ```
 2. Using random function to generate computer choice.
-   ```sh
+   ```Python
    all_list = ['rock', 'paper', 'scissors']
    computer_choice = random.choice(all_list)
    ```
 3. Full code..
-   ```sh
+   ```Python
    import random
    
    rock = '''
@@ -392,11 +392,11 @@ Simple hand game to form a shape and has below rules.
 Using randint from random library, simple function to roll the dice.
 
 1. User asked for number of times to roll the dice and parse to int.
-   ```sh
+   ```Python
    x = int(input("Enter number of times you want to roll the dice: "))
    ```
 2. Iterate or an option to exit. File is `random number dice.py`.
-   ```sh
+   ```Python
    i = 0
    while i < x:
     start = input("Press anykey to start the dice or c to exit: ")
@@ -406,7 +406,7 @@ Using randint from random library, simple function to roll the dice.
         break
    ```
 3. Another way of iteration. File is `dice roll.py`.
-   ```sh
+   ```Python
    i = 0
    while i < 1000:
     start = input("Press anykey to roll the dice or c to exit: ")
@@ -434,7 +434,7 @@ encode or decode.
 
 
 1. Output.
-   ```sh
+   ```Python
    Enter the string: Hello
    Input the code: 1
    Encode or Decode: encode
@@ -450,7 +450,7 @@ encode or decode.
 
    ```
 2. Full code.
-   ```sh
+   ```Python
    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
                'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
    
@@ -507,7 +507,7 @@ Find who bid highest and display the result.
 
 
 1. Output.
-   ```sh
+   ```Python
    Enter your name: Charlie
    Enter your bid amount: 10
    For more bidding press any key or 'x' to stop bidding: 
@@ -526,7 +526,7 @@ Find who bid highest and display the result.
 
    ```
 2. Full code.
-   ```sh
+   ```Python
    bd_dic = {}
    game_state = True
    while game_state:
@@ -570,7 +570,7 @@ Check if a year is leap year or not.
 ![leap year.drawio.png](Leap%20Year%2Fleap%20year.drawio.png)
 
 1. Output.
-   ```sh
+   ```Python
    Press any key to start the loop or C to end.
    Enter the year to check if the year is Leap year or not: 1600
    1600 year is LEAP year!1
@@ -583,7 +583,7 @@ Check if a year is leap year or not.
    Press any key to start the loop or C to end.
    ```
 2. Full code.
-   ```sh
+   ```Python
    i = 0
    while i < 100:
        x = input("Press any key to start the loop or C to end.")
@@ -621,7 +621,7 @@ Using `while` loop append user input to list and sort according to user choice.
 
 
 1. Output:
-   ```sh
+   ```Python
    Enter the new list value or 'c' to quit: 25
    Enter the new list value or 'c' to quit: 49
    Enter the new list value or 'c' to quit: 19
@@ -634,7 +634,7 @@ Using `while` loop append user input to list and sort according to user choice.
    Process finished with exit code 0
    ```
 2. Loop through user input until user types `c`.
-   ```sh
+   ```Python
    while x < 100:
     temp = input("Enter the new list value or 'c' to quit: ")
     if temp == "c":
@@ -647,7 +647,7 @@ Using `while` loop append user input to list and sort according to user choice.
    ```
 
 3. Ask for `asc` or `desc` or `none`.
-   ```sh
+   ```Python
    y = 0
    while y < 3:
     if y == 0:
@@ -662,7 +662,7 @@ Using `while` loop append user input to list and sort according to user choice.
         y+=1
    ```
 4. full code.
-   ```sh
+   ```Python
    # Sort a list
    
    lists = []
@@ -729,7 +729,7 @@ Also shuffle the generated password to make it more complex.
 
 
 1. Output:
-   ```sh
+   ```Python
    Welcome to the PyPassword Generator!
    How many letters would you like in your password?
    4
@@ -745,7 +745,7 @@ Also shuffle the generated password to make it more complex.
    ```
 
 2. Ask for `letters` , `numbers` and `symbols`.
-   ```sh
+   ```Python
    print("Welcome to the PyPassword Generator!")
    nr_letters= int(input("How many letters would you like in your password?\n")) 
    nr_symbols = int(input(f"How many symbols would you like?\n"))
@@ -753,7 +753,7 @@ Also shuffle the generated password to make it more complex.
    ```
    
 3. full code.
-   ```sh
+   ```Python
    #Password Generator Project
    import random
    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -800,14 +800,14 @@ Also shuffle the generated password to make it more complex.
 To repeat characters in a word or sentence.
 
 1. Output:
-   ```shell
+   ```Python
    Enter the string to count vowels: Hello World
    3
 
    Process finished with exit code 0
    ```
 2. Full code.
-   ```sh
+   ```Python
    sentance_count = input("Enter the string to count vowels: ")
    
    final_count = 0
@@ -834,7 +834,7 @@ Simple calculator which calculates each individual share of
 total bill with tip percentage.
 
 1. Output:
-   ```sh
+   ```Python
    Welcome to Bill Split Calculator!
    Enter the total bill amount: 120
    Enter number of people total amount will be split: 3
@@ -844,20 +844,20 @@ total bill with tip percentage.
    Process finished with exit code 0
    ```
 2. Ask for total bill.
-   ```sh
+   ```Python
    total_bill = float(input("Enter the total bill amount: "))
    
    ```
 2. Bill to be split between.
-   ```sh
+   ```Python
    int(input("Enter number of people total amount will be split: "))
    ```
 3. Bill to be split between.
-   ```sh
+   ```Python
    tip_percentage = float(input("Enter the tip percentage? 10, 20, or 5?"))
    ```
 4. full code.
-   ```sh
+   ```Python
    print("Welcome to Bill Split Calculator!")
    
    total_bill = float(input("Enter the total bill amount: "))
@@ -884,7 +884,7 @@ total bill with tip percentage.
 Calculate BMI using weight and height
 
 1. Output:
-   ```shell
+   ```Python
    Enter the weight to calculate BMI: 78
    Enter the height in meters to calculate BMI: 5.8
    2.32
@@ -893,7 +893,7 @@ Calculate BMI using weight and height
 
    ```
 2. Full code.
-   ```sh
+   ```Python
    # BMI Calculator
    
    weight = float(input("Enter the weight to calculate BMI: "))
@@ -914,7 +914,7 @@ Calculate BMI using weight and height
 Count and compare "x" and "o" in a sentence and return True or False
 
 1. Output:
-   ```shell
+   ```Python
    Check this number: 15
    It's not a prime number.
    [0, 3, 0, 3, 1, 7, 6, 5, 4, 3, 2, 1]
@@ -922,7 +922,7 @@ Count and compare "x" and "o" in a sentence and return True or False
    Process finished with exit code 0
    ```
 2. Full code.
-   ```sh
+   ```Python
     #Write your code below this line 👇
     def prime_checker(number):
     list_p = []
@@ -962,7 +962,7 @@ Simple calculator app for addition, substraction, multiplication and division.
 [ ]Start again new calculation
 
 1. Output:
-   ```shell
+   ```Python
    
     _____________________
    |  _________________  |
@@ -1007,7 +1007,7 @@ Simple calculator app for addition, substraction, multiplication and division.
    Type 'c' to continue calculation or 'x' to quit or 'n' for new calculation. x
    ```
 2. Full code.
-   ```sh
+   ```Python
    cal = True
    fir = True
    
@@ -1057,14 +1057,14 @@ input numbers.
 Not using lists or dictionary.
 
 1. Output.
-   ```sh
+   ```Python
    Enter your first number: 14
    Enter your second number: 28
    Enter your third number: 34
    34 c1 is biggest number!
    ```
 2. Full code.
-   ```sh
+   ```Python
 
    # Largest number in 3
    
@@ -1092,16 +1092,16 @@ Not using lists or dictionary.
 Simple function to convert Celsius to Fahrenheit..
 
 1. function definition.
-   ```sh
+   ```Python
    def cels_fahr(cels1):
     return ((cels1 * (9/5)) + 32)
    ```
 2. function instance
-   ```sh
+   ```Python
    fahr = cels_fahr(cels1)
    ```
 3. full code.
-   ```sh
+   ```Python
    # celsius to fahrenheit
    
    cels1 = int(input("Enter the temperature value in Celsius"))
@@ -1122,7 +1122,7 @@ Simple code to convert Radians to Degrees..
 
 
 1. full code.
-   ```sh
+   ```Python
    # Radians to Degrees
    
    angle = float(input("Enter the radians to convert to degrees: "))
@@ -1147,16 +1147,16 @@ Simple code to convert Radians to Degrees..
 Function to convert kilometers to miles..
 
 1. function definition.
-   ```sh
+   ```Python
    def km_miles(val1):
     return val1*0.621
    ```
 2. function instance
-   ```sh
+   ```Python
    miles = km_miles(val1)
    ```
 3. full code.
-   ```sh
+   ```Python
       val = int(input("Enter kilometer to convert into Miles: "))
       def km_miles(val1):
        return val1*0.621
@@ -1174,12 +1174,12 @@ Function to find Area of Triangle.
 Later learnt functions don't use Pascal case. `Triangle_Area(base,height)` 
 
 1. function definition.
-   ```sh
+   ```Python
    def Triangle_Area(base,height):
     return (base*height)/2
    ```
 2. function instance
-   ```sh
+   ```Python
    area = Triangle_Area(base,height)
    ```
 <a href="https://github.com/skthati/Python-Algorithms/blob/main/Add%20two%20numbers.py">View Code</a>
@@ -1191,14 +1191,14 @@ Later learnt functions don't use Pascal case. `Triangle_Area(base,height)`
 Replace space with star.
 
 1. Output:
-   ```shell
+   ```Python
    Hello*I*am*Sandeep
    
    Process finished with exit code 0
 
    ```
 2. Full code.
-   ```sh
+   ```Python
    word = "Hello I am Sandeep"
    n_word = ""
    for i in word:
@@ -1220,7 +1220,7 @@ Replace space with star.
 Count and compare "x" and "o" in a sentence and return True or False
 
 1. Output:
-   ```shell
+   ```Python
    Enter the sentence to count X's and O's: xxoooxxooxxxoooxxxxooxoxoooxxxooxxoox
    False
    
@@ -1228,7 +1228,7 @@ Count and compare "x" and "o" in a sentence and return True or False
 
    ```
 2. Full code.
-   ```sh
+   ```Python
    
    sentence = input("Enter the sentence to count X's and O's: ")
    
@@ -1264,7 +1264,7 @@ Cast user input number to string. Loop through string and add each string charec
 by type casting again back to Int.
 
 1. Full code.
-   ```sh
+   ```Python
       # Split the digits and add
       number = str(input("Enter a number: "))
       total = 0
@@ -1287,7 +1287,7 @@ by type casting again back to Int.
 Find Largest number from list using for loop.
 
 1. Full code.
-   ```sh
+   ```Python
    numbers = [23, 45, 57, 494, 437, 4849, 4,487,345]
    
    x = 0
@@ -1310,12 +1310,12 @@ Find Largest number from list using for loop.
 Function to find square root of a number.
 
 1. function definition.
-   ```sh
+   ```Python
    def sqroot(num1):
     return num1 ** 0.5
    ```
 2. function instance
-   ```sh
+   ```Python
    sqrt = sqroot(num1)
    ```
 
@@ -1328,7 +1328,7 @@ Function to find square root of a number.
 To check if a number is even or odd in python.
 
 1. Output:
-   ```shell
+   ```Python
    Enter the number: 10
    Number is even!
    
@@ -1339,7 +1339,7 @@ To check if a number is even or odd in python.
 
    ```
 2. Full code.
-   ```sh
+   ```Python
    # Check if a number is even or odd
    num = int(input("Enter the number: "))
    if num == 0:
@@ -1363,7 +1363,7 @@ To check if a number is positive or negative in python.
 We can also do by converting the input to int.
 
 1. Output:
-   ```shell
+   ```Python
    Enter the number: -2
    You entered Negative number!
    
@@ -1371,7 +1371,7 @@ We can also do by converting the input to int.
 
    ```
 2. Full code.
-   ```sh
+   ```Python
    # Check if number is positive or negative or 0
 
    num = input("Enter the number: ")
@@ -1399,7 +1399,7 @@ Easy way to doing like python.
 
 
 1. Example code of command
-   ```sh
+   ```Python
    print(f'Addition of {num1} and {num2} is equals to {add(num1,num2)}')
    ```
 
@@ -1412,20 +1412,20 @@ Easy way to doing like python.
 Simple function to add two int numbers in python.
 
 1. First number input.
-   ```sh
+   ```Python
    a = int(input("Enter your first Number"))
    ```
 2. Second number input.
-   ```sh
+   ```Python
    b = int(input("Enter your Second Number"))
    ```
 3. Define function which takes two arguments and returns result.
-   ```sh
+   ```Python
    def add_numbers(a,b):
     return a + b;
    ```
 4. Print Output along with Inputs.
-   ```sh
+   ```Python
    print(str(a) + " + " + str(b) + " = " + str(add_numbers(a,b)))
    ```
 
@@ -1437,11 +1437,11 @@ Simple function to add two int numbers in python.
 
 Simple function 
 1. Input a word or string.
-   ```sh
+   ```Python
    name = input("Please enter your name: ")
    ```
 2. Define function to count charecters and returns result.
-   ```sh
+   ```Python
    def name_count(name):
        count = 0
        for i in name:
@@ -1449,7 +1449,7 @@ Simple function
        return count
    ```
 3. Print Output.
-   ```sh
+   ```Python
    print ("Your name has " + str(name_count(name)) + " letters!")
    ```
 
