@@ -1,0 +1,4 @@
+.title()
+.slice()
+.split()
+.strip()
