@@ -76,3 +76,9 @@ def alphabet_position(text):
     return ' '.join(str(ord(c) - 96) for c in text.lower() if c.isalpha())
 ```
 
+# One line coders
+```Python
+alpha = ['fizzbuzz' if i % 3 == 0 and i % 5 == 0 else 'fizz' if i % 3 == 0 else 'buzz' if i % 5 == 0 else i for i in range (0, 20)]
+
+print(alpha)
+```
