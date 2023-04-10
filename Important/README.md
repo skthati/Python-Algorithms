@@ -82,3 +82,11 @@ alpha = ['fizzbuzz' if i % 3 == 0 and i % 5 == 0 else 'fizz' if i % 3 == 0 else 
 
 print(alpha)
 ```
+
+
+```Python
+lst = [0, 1]
+for i in range(20):
+    lst.append(lst[i] + lst[i+1])
+print(lst)
+```
