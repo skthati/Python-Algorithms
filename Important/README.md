@@ -90,3 +90,29 @@ for i in range(20):
     lst.append(lst[i] + lst[i+1])
 print(lst)
 ```
+
+```Python
+numbers = [1, 2, 3, 4]
+
+reduce(lambda a, b: a + b, numbers)
+```
+
+```Python
+
+from functools import reduce
+numbers = [3, 5, 2, 4, 7, 1]
+
+x = reduce(lambda x, y: x if x < y else y, numbers)
+# reduce(lambda a, b: a if a < b else b, numbers)
+print(x)
+```
+
+```Python
+list(map(lambda x: x.upper(), ['cat', 'dog', 'cow']))
+['CAT', 'DOG', 'COW']
+```
+
+```Python
+list(filter(lambda x: 'o' in x, ['cat', 'dog', 'cow']))
+['dog', 'cow']
+```
