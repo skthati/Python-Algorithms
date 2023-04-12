@@ -190,3 +190,18 @@ c = len([v for k, v in d.items() if v > 1])
 print(d)
 print(c)
 ```
+```Python
+def duplicate_count(s):
+  return len([c for c in set(s.lower()) if s.lower().count(c)>1])
+  
+  from collections import Counter
+
+def duplicate_count(text):
+    return sum(1 for c, n in Counter(text.lower()).iteritems() if n > 1)
+
+def duplicate_count(text):
+    text = text.lower()
+    return(sum([text.count(c) > 1 for c in set(text)]))
+```
+
+python set() method removes duplicates and returns distinctive values.
