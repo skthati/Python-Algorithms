@@ -116,3 +116,38 @@ list(map(lambda x: x.upper(), ['cat', 'dog', 'cow']))
 list(filter(lambda x: 'o' in x, ['cat', 'dog', 'cow']))
 ['dog', 'cow']
 ```
+
+```Python
+def pig_it(text):
+#     text_1 = []
+#     text = text.split()
+#     for i in text:
+#         text_1.append(i[1::]+i[:1:]+"ay")
+#     return (" ".join(text_1))
+    text = text.split()
+    text1 = [i[1::]+i[:1:]+"ay" for i in text]
+    return (" ".join(text1))
+```
+
+```Python
+name = "sandeep thati"
+n = "san deep"
+n = n.split()
+print(n)
+name1 = name.split()
+print(name1)
+name2 = []
+for i in name1:
+    name2.append(i[1::]+i[:1:]+"ay")
+print(" ".join(name2))
+
+n1 = [i[1::]+i[:1:]+"ay" for i in n]
+print(n1)
+```
+
+```Python
+def pig_it(text):
+    lst = text.split()
+    return ' '.join( [word[1:] + word[:1] + 'ay' if word.isalpha() else word for word in lst])
+```
+
