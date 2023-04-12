@@ -151,3 +151,42 @@ def pig_it(text):
     return ' '.join( [word[1:] + word[:1] + 'ay' if word.isalpha() else word for word in lst])
 ```
 
+
+```Python
+def array_diff(a, b):
+    return [x for x in a if x not in b]
+```
+
+```Python
+a = "abcabc"
+b = {}
+for i in a:
+    b[i] = a.count(i)
+print(b)
+    
+d = [a.count(i) for i in a]
+print(d)
+```
+```Python
+a = "Indivisibilities"
+a = a.lower()
+b = {}
+for i in a:
+    b[i] = a.count(i)
+
+
+for key, value in b.items():
+    print(f"{key} and {value}")
+for i in b.items():
+    print(i)
+```
+```Python
+a = "Indivisibilities"
+a = a.lower()
+d = {}
+d = {i: a.count(i) for i in a}
+c = len([v for k, v in d.items() if v > 1])
+
+print(d)
+print(c)
+```
