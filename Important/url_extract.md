@@ -46,8 +46,3 @@ domain3 = get_domain_name(url3)
 print(domain3)  # Output: cnet
 
 
-
-Regenerate response
-Send a message...
-
-ChatGPT Mar 23 Version. Free Research Preview. ChatGPT may produce inaccurate information about people, places, or facts
