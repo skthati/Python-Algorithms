@@ -1,7 +1,18 @@
 .title()
 .slice()
 .split()
-.strip()
+.strip() removes the spaces.
+
+```Python
+>>> url = 'www.example.com/'
+>>> url.strip('w./')
+'example.com'
+```
+Strips all the charecters from the bracket.
+rstrip() --> strips everthing from right
+lstrip() --> strips everthing from left
+strip() --> strips from both sides
+strip(a.b./@!) --> strips everthing from the bracket.
 
 
 ```Python
@@ -205,3 +216,12 @@ def duplicate_count(text):
 ```
 
 python set() method removes duplicates and returns distinctive values.
+
+
+```Python
+from functools import reduce
+arr = [-3, 0, -5, -9, 0, 5, 4, 2, 5]
+positives = reduce(lambda count, i: count + (i>0), arr, 0)
+negatives = reduce(lambda count, i: count + (i<0), arr, 0)
+```
+
