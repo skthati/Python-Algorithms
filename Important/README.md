@@ -225,3 +225,33 @@ positives = reduce(lambda count, i: count + (i>0), arr, 0)
 negatives = reduce(lambda count, i: count + (i<0), arr, 0)
 ```
 
+filter () 
+
+```Python 
+filter(function, iterable)
+
+Find second largest number in a list
+```Python
+    n = int(input())
+    arr = map(int, input().split())
+    arr = set(arr)
+    arr.remove(max(arr))
+    print(max(arr))
+```
+iterations with dictionaries
+```Python
+    g = {}
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        g[name] = score
+    mx = max(g.values())
+    ng = {k:v for k,v in g.items() if v != min(g.values())}
+    ng1 = {k:v for k,v in ng.items() if v == min(ng.values())}
+    ng1 = sorted(ng1)
+    for i in ng1:
+        print(i)
+```
+
+
+
