@@ -253,5 +253,8 @@ iterations with dictionaries
         print(i)
 ```
 
-
+Join
+```Python
+print " and ".join(["A", "B", "C"])
+```
 
