@@ -28,3 +28,9 @@ def get_domain_name(url):
     return domain
 ```
 
+```Python
+s = 90
+s%=60
+print(s)
+```
+
