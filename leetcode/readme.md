@@ -13,6 +13,7 @@
     <li><a href="#reverse-vowels">Reverse vowels in a String</a></li>
     <li><a href="#can-place-flowers">Can place Flowers</a></li>
     <li><a href="#greatest-no-candies">Greatest Number of Candies</a></li>
+    <li><a href="#merge-strings-alternatively">Merge Strings alternatively</li>
 </ol>
 <hr>
 <hr>
@@ -199,6 +200,56 @@ Output
 4 5
 6 5
 [True, True, True, False, True]
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+```
+
+## Merge Strings Alternatively <a name="merge-strings-alternatively"></a>
+
+You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
+
+Return the merged string.
+
+Example 1:
+
+Input: word1 = "abc", word2 = "pqr"
+Output: "apbqcr"
+Explanation: The merged string will be merged as so:
+word1:  a   b   c
+word2:    p   q   r
+merged: a p b q c r
+
+```Python
+word1 = "arctic"
+word2 = "antartica"
+
+#word1 = list(word1)
+#word2 = list(word2)
+
+final_word = []
+max_word_length = 0
+
+if len(word1) > len(word2):
+    max_word_length = len(word1)
+else:
+    max_word_length = len(word2)
+
+for i in range(max_word_length):
+    final_word.append(word1[:1:])
+    final_word.append(word2[:1:])
+    word1 = word1[1::]
+    word2 = word2[1::]
+
+final_word = "".join(final_word)
+
+print(final_word)
+
+```
+Output
+```
+aarncttairctica
 
 
 ** Process exited - Return Code: 0 **
