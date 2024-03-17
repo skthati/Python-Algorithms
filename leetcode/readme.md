@@ -14,6 +14,7 @@
     <li><a href="#can-place-flowers">Can place Flowers</a></li>
     <li><a href="#greatest-no-candies">Greatest Number of Candies</a></li>
     <li><a href="#merge-strings-alternatively">Merge Strings alternatively</li>
+    <li><a href="#move-zeros">Move Zeros</li>
 </ol>
 <hr>
 <hr>
@@ -22,9 +23,7 @@
 # Reverse Vowels <a name="reverse-vowels"></a>
 
 345. Reverse Vowels of a String
-Easy
-Topics
-Companies
+
 Given a string s, reverse only all the vowels in the string and return it.
 
 The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
@@ -81,9 +80,7 @@ Press Enter to exit terminal
  ## Can Place Flowers <a name="can-place-flowers"></a>
 
 605. Can Place Flowers
-Easy
-Topics
-Companies
+
 You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in adjacent plots.
 
 Given an integer array flowerbed containing 0's and 1's, where 0 means empty and 1 means not empty, and an integer n, return true if n new flowers can be planted in the flowerbed without violating the no-adjacent-flowers rule and false otherwise.
@@ -141,10 +138,7 @@ Press Enter to exit terminal
 ```
 ## Greatest Number of Candies <a name="greatest-no-candies"></a>
 1431. Kids With the Greatest Number of Candies
-Easy
-Topics
-Companies
-Hint
+
 There are n kids with candies. You are given an integer array candies, where each candies[i] represents the number of candies the ith kid has, and an integer extraCandies, denoting the number of extra candies that you have.
 
 Return a boolean array result of length n, where result[i] is true if, after giving the ith kid all the extraCandies, they will have the greatest number of candies among all the kids, or false otherwise.
@@ -255,3 +249,45 @@ aarncttairctica
 ** Process exited - Return Code: 0 **
 Press Enter to exit terminal
 ```
+
+
+## Move Zeros <a name="move-zeros"></a>
+
+
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+Note that you must do this in-place without making a copy of the array.
+
+ 
+
+Example 1:
+
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+```Python
+
+wrd = [1,0,3,0,4,0,5,0,6,0]
+
+cnt = 0
+
+for i in range(len(wrd)):
+    if wrd[i] == 0:
+        wrd.pop(i)
+        wrd.append(0)
+
+print(wrd)
+
+```
+
+Output
+
+```
+[1, 3, 4, 5, 6, 0, 0, 0, 0, 0]
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+
+```
+
