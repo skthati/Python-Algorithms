@@ -16,7 +16,8 @@
     <li><a href="#merge-strings-alternatively">Merge Strings alternatively</a></li>
     <li><a href="#move-zeros">Move Zeros</a></li>
     <li><a href="#is-subsequence">Is Subsequence</a></li>
-    <li><a href=#reverse-words-in-a-string">Reverse words in a string</a></li>
+    <li><a href="#reverse-words-in-a-string">Reverse words in a string</a></li>
+    <li><a href="#string-compression">String Compression</a></li>
 </ol>
 <hr>
 <hr>
@@ -365,6 +366,10 @@ print(wrd)
 wrd = wrd[::-1]
 print(wrd)
 
+#Remove extra spaces
+wrd = [i for i in wrd if i != ""]
+print(wrd)
+
 #Convert list to string
 wrd = " ".join(wrd)
 print(wrd)
@@ -383,3 +388,62 @@ Press Enter to exit terminal
 
 ```
 
+## String Compression <a name="string-compression"></a>
+
+Given an array of characters chars, compress it using the following algorithm:
+
+Begin with an empty string s. For each group of consecutive repeating characters in chars:
+
+If the group's length is 1, append the character to s.
+Otherwise, append the character followed by the group's length.
+The compressed string s should not be returned separately, but instead, be stored in the input character array chars. Note that group lengths that are 10 or longer will be split into multiple characters in chars.
+
+After you are done modifying the input array, return the new length of the array.
+
+You must write an algorithm that uses only constant extra space.
+
+ 
+
+Example 1:
+
+Input: chars = ["a","a","b","b","c","c","c"]
+Output: Return 6, and the first 6 characters of the input array should be: ["a","2","b","2","c","3"]
+Explanation: The groups are "aa", "bb", and "ccc". This compresses to "a2b2c3".
+
+```Python
+chars = ["a","b","b","b","b","b","b","b","b","b","b","b","b","c","c","c"]
+dict_chars = {}
+final_list = []
+
+#Find each character, its count and save to dictionary
+for i in range(len(chars)):
+    if chars[i] not in dict_chars:
+        dict_chars[chars[i]] = chars.count(chars[i])
+print(dict_chars)
+
+#Add dictionary key, values to list
+for k, v in dict_chars.items():
+    final_list.append(k)
+    if v == 1:
+        pass
+    elif v > 10:
+        v = str(v)
+        for i in v:
+            final_list.append(v[:1:])
+            v = v[1::]
+    else:
+        final_list.append(str(v))
+
+final_list = ''.join(final_list)
+
+print(final_list)
+```
+Output
+```
+{'a': 1, 'b': 12, 'c': 3}
+ab12c3
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+```
