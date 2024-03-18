@@ -13,8 +13,10 @@
     <li><a href="#reverse-vowels">Reverse vowels in a String</a></li>
     <li><a href="#can-place-flowers">Can place Flowers</a></li>
     <li><a href="#greatest-no-candies">Greatest Number of Candies</a></li>
-    <li><a href="#merge-strings-alternatively">Merge Strings alternatively</li>
-    <li><a href="#move-zeros">Move Zeros</li>
+    <li><a href="#merge-strings-alternatively">Merge Strings alternatively</a></li>
+    <li><a href="#move-zeros">Move Zeros</a></li>
+    <li><a href="#is-subsequence">Is Subsequence</a></li>
+    <li><a href=#reverse-words-in-a-string">Reverse words in a string</a></li>
 </ol>
 <hr>
 <hr>
@@ -284,6 +286,96 @@ Output
 
 ```
 [1, 3, 4, 5, 6, 0, 0, 0, 0, 0]
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+
+```
+
+## Is Subsequence <a name="is-subsequence"></a>
+Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+
+ 
+
+Example 1:
+
+Input: s = "abc", t = "ahbgdc"
+Output: true
+Example 2:
+
+Input: s = "axc", t = "ahbgdc"
+Output: false
+
+
+```Python
+wrd1 = "abc" 
+wrd2 = "ahbgdc"
+wrd3 = ""
+
+for i in wrd2:
+    if i in wrd1:
+        wrd3 = wrd3 + i
+
+if wrd1 == wrd3:
+    print(True)
+else:
+    print(False)
+
+```
+Output
+```
+True
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+
+```
+
+## Reverse words in a string <a name="reverse-words-in-a-string"></a>
+A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
+
+Return a string of the words in reverse order concatenated by a single space.
+
+Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.
+
+ 
+
+Example 1:
+
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+Example 2:
+
+Input: s = "  hello world  "
+Output: "world hello"
+Explanation: Your reversed string should not contain leading or trailing spaces.
+
+```Python
+wrd = "the sky is blue"
+
+#Split the word
+wrd = wrd.split(" ")
+print(wrd)
+
+#reverse the list
+wrd = wrd[::-1]
+print(wrd)
+
+#Convert list to string
+wrd = " ".join(wrd)
+print(wrd)
+
+```
+Output
+
+```
+['the', 'sky', 'is', 'blue']
+['blue', 'is', 'sky', 'the']
+blue is sky the
 
 
 ** Process exited - Return Code: 0 **
