@@ -19,6 +19,7 @@
     <li><a href="#reverse-words-in-a-string">Reverse words in a string</a></li>
     <li><a href="#string-compression">String Compression</a></li>
     <li><a href="#remove-stars-from-string>Remove stars from a string</a></li>
+    <li><a href="#hightest-altitude">Find the highest Altitude</a></li>
 </ol>
 <hr>
 <hr>
@@ -527,3 +528,46 @@ lecoe
 ** Process exited - Return Code: 0 **
 Press Enter to exit terminal
 ```
+
+## Find the highest Altitude <a name="highest-altitude"></a>
+
+There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
+
+You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.
+
+ 
+
+Example 1:
+
+Input: gain = [-5,1,5,0,-7]
+Output: 1
+Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
+Example 2:
+
+Input: gain = [-4,-3,-2,-1,4,3,2]
+Output: 0
+Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
+
+```Python
+gain = [-5,1,5,0,-7]
+new_gain_altitudes = [0]
+hightest_altitude = []
+temp = 0
+
+for i in range(len(gain)):
+    temp = temp + gain[i]
+    new_gain_altitudes.append(temp)
+
+print(new_gain_altitudes)
+print(f"Highest Altitude is {max(new_gain_altitudes)}.")
+```
+Output
+```
+[0, -5, -4, 1, 1, -6]
+Highest Altitude is 1.
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+```
+
