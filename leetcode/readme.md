@@ -20,6 +20,7 @@
     <li><a href="#string-compression">String Compression</a></li>
     <li><a href="#remove-stars-from-string>Remove stars from a string</a></li>
     <li><a href="#hightest-altitude">Find the highest Altitude</a></li>
+    <li><a href="#guess-number-higher-lower">Guess the number Higher or Lower</a></li>
 </ol>
 <hr>
 <hr>
@@ -81,6 +82,8 @@ cecanutwotor
 ** Process exited - Return Code: 0 **
 Press Enter to exit terminal
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
  ## Can Place Flowers <a name="can-place-flowers"></a>
 
@@ -141,6 +144,9 @@ Output
 ** Process exited - Return Code: 0 **
 Press Enter to exit terminal
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Greatest Number of Candies <a name="greatest-no-candies"></a>
 1431. Kids With the Greatest Number of Candies
 
@@ -205,6 +211,8 @@ Output
 Press Enter to exit terminal
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Merge Strings Alternatively <a name="merge-strings-alternatively"></a>
 
 You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
@@ -255,6 +263,7 @@ aarncttairctica
 Press Enter to exit terminal
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Move Zeros <a name="move-zeros"></a>
 
@@ -295,6 +304,8 @@ Output
 Press Enter to exit terminal
 
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Is Subsequence <a name="is-subsequence"></a>
 Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
@@ -337,6 +348,8 @@ True
 Press Enter to exit terminal
 
 ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Reverse words in a string <a name="reverse-words-in-a-string"></a>
 A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
@@ -389,6 +402,7 @@ blue is sky the
 Press Enter to exit terminal
 
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## String Compression <a name="string-compression"></a>
 
@@ -449,6 +463,7 @@ ab12c3
 ** Process exited - Return Code: 0 **
 Press Enter to exit terminal
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Remove stars from a string <a name="remove-stars-from-string"></a>
 
@@ -529,6 +544,8 @@ lecoe
 Press Enter to exit terminal
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Find the highest Altitude <a name="highest-altitude"></a>
 
 There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
@@ -565,6 +582,110 @@ Output
 ```
 [0, -5, -4, 1, 1, -6]
 Highest Altitude is 1.
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Guess the number Higher or Lower <a name="guess-number-higher-lower"></a>
+We are playing the Guess Game. The game is as follows:
+
+I pick a number from 1 to n. You have to guess which number I picked.
+
+Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.
+
+You call a pre-defined API int guess(int num), which returns three possible results:
+
+-1: Your guess is higher than the number I picked (i.e. num > pick).
+1: Your guess is lower than the number I picked (i.e. num < pick).
+0: your guess is equal to the number I picked (i.e. num == pick).
+Return the number that I picked.
+
+ 
+
+Example 1:
+
+Input: n = 10, pick = 6
+Output: 6
+Example 2:
+
+Input: n = 1, pick = 1
+Output: 1
+Example 3:
+
+Input: n = 2, pick = 1
+Output: 1
+
+```Python
+import random
+
+n = int(input(f"Enter the max number to choose: "))
+
+def computer_random_number():
+    global n
+    return random.randint(1, n)
+    
+def computer_respond_user_guess(user_num: int):
+    
+    if user_num == computer_num:
+        return 0
+    elif user_num > computer_num:
+        return 1
+    elif user_num < computer_num:
+        return -1
+        
+game = True
+computer_num = computer_random_number()
+print(f"Computer choosen number: {computer_num}.")
+low, high = 1, n
+while game:
+    guess_num = (low + high)//2
+    print(f"Guess number is :{guess_num} ({low} + {high}) //2 ")
+    result = computer_respond_user_guess(guess_num)
+    
+    if result == 0:
+        print(f"Guess_num {guess_num} is equal to Computer_num {computer_num}")
+        game = False
+    elif result == 1:
+        print(f"Guess_num {guess_num} is greater than Computer_num {computer_num}" )
+        print(f"Assign {guess_num} to high value {high}")
+        high = guess_num
+        print(f"High value is now {high}, game continues")
+        game = True
+    elif result == -1:
+        print(f"Guess num {guess_num} is less than Computer_num {computer_num}")
+        print(f"Assign {guess_num} to low value {low}")
+        low = guess_num
+        print(f"Low value is now {low}, game continues")
+        game = True
+    
+
+```
+Output
+```
+Enter the max number to choose: 
+50
+Computer choosen number: 38.
+Guess number is :25 (1 + 50) //2 
+Guess num 25 is less than Computer_num 38
+Assign 25 to low value 1
+Low value is now 25, game continues
+Guess number is :37 (25 + 50) //2 
+Guess num 37 is less than Computer_num 38
+Assign 37 to low value 25
+Low value is now 37, game continues
+Guess number is :43 (37 + 50) //2 
+Guess_num 43 is greater than Computer_num 38
+Assign 43 to high value 50
+High value is now 43, game continues
+Guess number is :40 (37 + 43) //2 
+Guess_num 40 is greater than Computer_num 38
+Assign 40 to high value 43
+High value is now 40, game continues
+Guess number is :38 (37 + 40) //2 
+Guess_num 38 is equal to Computer_num 38
 
 
 ** Process exited - Return Code: 0 **
